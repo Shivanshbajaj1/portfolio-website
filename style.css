@@ -1,25 +1,244 @@
-body {
-    background-color: #121212;
-    color: white;
-    font-family: Arial, sans-serif;
-    max-width: 1000px;
-    margin: auto;
-    padding: 20px;
-    line-height: 1.6;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
 }
 
-header {
-    text-align: center;
-    padding: 50px 0;
+body{
+    background:#050505;
+    color:white;
+    font-family:Arial, Helvetica, sans-serif;
+    overflow-x:hidden;
 }
 
-h1 {
-    font-size: 50px;
+/* HERO */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:40px;
+    position:relative;
 }
 
-section {
-    margin: 40px 0;
-    padding: 20px;
-    border: 1px solid #333;
-    border-radius: 10px;
+.hero-content{
+    max-width:900px;
+    z-index:2;
+}
+
+.welcome{
+    color:#a855f7;
+    letter-spacing:4px;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:5rem;
+    background:linear-gradient(90deg,#a855f7,#ec4899,#3b82f6);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.hero h2{
+    margin-top:20px;
+    font-size:1.4rem;
+    color:#ddd;
+}
+
+.hero-text{
+    margin-top:25px;
+    color:#bdbdbd;
+    line-height:1.8;
+    font-size:1.1rem;
+}
+
+.buttons{
+    margin-top:40px;
+}
+
+.btn{
+    text-decoration:none;
+    padding:14px 28px;
+    border-radius:50px;
+    margin:10px;
+    display:inline-block;
+    transition:0.3s;
+}
+
+.primary{
+    background:linear-gradient(90deg,#9333ea,#2563eb);
+    color:white;
+}
+
+.secondary{
+    border:2px solid #9333ea;
+    color:white;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+}
+
+/* BLOBS */
+
+.blob{
+    position:fixed;
+    border-radius:50%;
+    filter:blur(120px);
+    opacity:.25;
+    animation:float 8s infinite alternate;
+}
+
+.blob1{
+    width:300px;
+    height:300px;
+    background:#9333ea;
+    top:50px;
+    left:50px;
+}
+
+.blob2{
+    width:350px;
+    height:350px;
+    background:#2563eb;
+    top:100px;
+    right:50px;
+}
+
+.blob3{
+    width:300px;
+    height:300px;
+    background:#ec4899;
+    bottom:50px;
+    left:40%;
+}
+
+@keyframes float{
+    from{
+        transform:translateY(0);
+    }
+    to{
+        transform:translateY(60px);
+    }
+}
+
+/* SECTIONS */
+
+.section{
+    max-width:1200px;
+    margin:auto;
+    padding:100px 20px;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+    font-size:3rem;
+    background:linear-gradient(90deg,#60a5fa,#a855f7);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.card{
+    background:#111;
+    padding:35px;
+    border-radius:20px;
+    border:1px solid #222;
+    line-height:1.9;
+}
+
+/* SKILLS */
+
+.skills-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.skill-card{
+    background:#111;
+    border:1px solid #222;
+    padding:30px;
+    border-radius:20px;
+    transition:0.3s;
+}
+
+.skill-card:hover{
+    transform:translateY(-5px);
+    border-color:#9333ea;
+}
+
+/* PROJECTS */
+
+.project-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+}
+
+.project-card{
+    background:#111;
+    padding:30px;
+    border-radius:20px;
+    border:1px solid #222;
+    transition:0.3s;
+}
+
+.project-card:hover{
+    transform:translateY(-8px);
+    border-color:#9333ea;
+}
+
+.project-card h3{
+    margin-bottom:15px;
+}
+
+/* CONTACT */
+
+.contact-box{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.contact-box a{
+    text-decoration:none;
+    color:white;
+    background:#111;
+    padding:15px 30px;
+    border-radius:12px;
+    border:1px solid #333;
+    transition:0.3s;
+}
+
+.contact-box a:hover{
+    border-color:#9333ea;
+}
+
+/* FOOTER */
+
+footer{
+    text-align:center;
+    padding:30px;
+    color:#888;
+    border-top:1px solid #111;
+}
+
+@media(max-width:768px){
+
+    .hero h1{
+        font-size:3rem;
+    }
+
+    .hero h2{
+        font-size:1rem;
+    }
+
+    .section-title{
+        font-size:2rem;
+    }
 }
