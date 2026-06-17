@@ -1,4 +1,6 @@
 body {
+    background-color: #121212;
+    color: white;
     font-family: Arial, sans-serif;
     max-width: 1000px;
     margin: auto;
@@ -8,14 +10,16 @@ body {
 
 header {
     text-align: center;
-    padding: 40px 0;
+    padding: 50px 0;
 }
 
 h1 {
-    font-size: 48px;
-    margin-bottom: 10px;
+    font-size: 50px;
 }
 
 section {
     margin: 40px 0;
+    padding: 20px;
+    border: 1px solid #333;
+    border-radius: 10px;
 }
