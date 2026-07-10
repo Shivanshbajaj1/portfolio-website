@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shivansh Bajaj — AI/ML Engineer</title>
+<meta name="description" content="Shivansh Bajaj — AI/ML Engineering student building computer vision and machine learning software. Portfolio, projects, and contact.">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Inter:wght@300..700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<!-- ============ LOADING SCREEN ============ -->
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="loader__mark">
+    <svg viewBox="0 0 64 64" width="56" height="56">
+      <circle cx="32" cy="32" r="28" fill="none" stroke="url(#loaderGrad)" stroke-width="2" stroke-dasharray="176" stroke-dashoffset="176" class="loader__ring"/>
+      <defs>
+        <linearGradient id="loaderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#8B5CF6"/>
+          <stop offset="100%" stop-color="#3B82F6"/>
+        </linearGradient>
+      </defs>
+    </svg>
+  </div>
+  <p class="loader__text">initializing<span class="loader__dots">...</span></p>
+</div>
+
+<!-- ============ AMBIENT BACKGROUND (persistent, behind everything) ============ -->
+<div class="bg" aria-hidden="true">
+  <div class="bg__grid"></div>
+  <div class="bg__blob bg__blob--1"></div>
+  <div class="bg__blob bg__blob--2"></div>
+  <div class="bg__blob bg__blob--3"></div>
+  <canvas id="particles"></canvas>
+</div>
+<div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+<!-- ============ SCROLL PROGRESS ============ -->
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+<!-- ============ NAVBAR ============ -->
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="#home" class="nav__logo" aria-label="Shivansh Bajaj — home">
+      <span class="nav__logo-bracket">&lt;</span>SB<span class="nav__logo-bracket">/&gt;</span>
+    </a>
+
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#home" class="nav__link active-link" data-section="home">Home</a>
+      <a href="#about" class="nav__link" data-section="about">About</a>
+      <a href="#skills" class="nav__link" data-section="skills">Skills</a>
+      <a href="#projects" class="nav__link" data-section="projects">Projects</a>
+      <a href="#journey" class="nav__link" data-section="journey">Journey</a>
+      <a href="#contact" class="nav__link" data-section="contact">Contact</a>
+    </nav>
+
+    <div class="nav__actions">
+      <a href="assets/Shivansh_Bajaj_Resume.pdf" class="btn btn--ghost btn--sm" download>
+        <span>Resume</span>
+      </a>
+    </div>
+
+    <button class="nav__burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ============ MOBILE MENU ============ -->
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <nav aria-label="Mobile primary">
+    <a href="#home" class="mobile-menu__link">Home</a>
+    <a href="#about" class="mobile-menu__link">About</a>
+    <a href="#skills" class="mobile-menu__link">Skills</a>
+    <a href="#projects" class="mobile-menu__link">Projects</a>
+    <a href="#journey" class="mobile-menu__link">Journey</a>
+    <a href="#contact" class="mobile-menu__link">Contact</a>
+    <a href="assets/Shivansh_Bajaj_Resume.pdf" class="btn btn--primary" download style="margin-top:2rem;">Download Resume</a>
+  </nav>
+</div>
+
+<main id="main">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="home">
+    <div class="hero__inner">
+
+      <div class="hero__left" data-reveal>
+        <p class="hero__eyebrow"><span class="hero__eyebrow-dot"></span>Available for AI/ML internships</p>
+
+        <h1 class="hero__heading">
+          <span class="hero__hi">Hi, I'm</span>
+          <span class="hero__name">Shivansh Bajaj</span>
+        </h1>
+
+        <div class="hero__typewriter">
+          <span class="hero__typewriter-prefix">I build as a</span>
+          <span class="hero__typewriter-text" id="typewriter"></span><span class="hero__cursor">|</span>
+        </div>
+
+        <p class="hero__desc">
+          Building intelligent software that turns machine learning models into things people can actually use — from vision systems that respond to a hand, to pipelines that turn raw data into decisions.
+        </p>
+
+        <div class="hero__actions">
+          <a href="#projects" class="btn btn--primary">
+            <span>Explore Projects</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="assets/Shivansh_Bajaj_Resume.pdf" class="btn btn--ghost" download>
+            <span>Download Resume</span>
+          </a>
+        </div>
+
+        <div class="hero__social">
+          <a href="https://github.com/Shivanshbajaj1" target="_blank" rel="noopener" aria-label="GitHub" class="social-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.79-.25.79-.55 0-.27-.01-1.17-.02-2.12-3.2.7-3.87-1.36-3.87-1.36-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.78 1.19 1.78 1.19 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.68 0-1.25.45-2.28 1.19-3.08-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.21-1.49 3.18-1.18 3.18-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.08 0 4.41-2.69 5.38-5.25 5.67.41.35.78 1.05.78 2.11 0 1.53-.01 2.76-.01 3.13 0 .3.21.66.79.55A10.52 10.52 0 0 0 23.5 12c0-6.35-5.15-11.5-11.5-11.5Z"/></svg>
+          </a>
+          <a href="https://linkedin.com/in/shivansh-bajaj-a433b7371" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.8 0 0 .78 0 1.75v20.5C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.75V1.75C24 .78 23.2 0 22.22 0Z"/></svg>
+          </a>
+          <a href="mailto:shivanshbajaj276@gmail.com" aria-label="Email" class="social-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 5h18v14H3V5Z"/><path d="m3 6 9 7 9-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero__right" data-reveal data-reveal-delay="120">
+        <div class="hero__portrait">
+          <div class="hero__portrait-ring"></div>
+          <div class="hero__portrait-img">
+            <svg viewBox="0 0 200 200" width="100%" height="100%" role="img" aria-label="Abstract portrait avatar">
+              <defs>
+                <linearGradient id="avatarGrad" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#8B5CF6"/>
+                  <stop offset="100%" stop-color="#3B82F6"/>
+                </linearGradient>
+              </defs>
+              <circle cx="100" cy="100" r="100" fill="#111827"/>
+              <circle cx="100" cy="82" r="34" fill="url(#avatarGrad)" opacity="0.9"/>
+              <path d="M40 190c6-42 34-64 60-64s54 22 60 64" fill="url(#avatarGrad)" opacity="0.9"/>
+            </svg>
+          </div>
+          <div class="hero__orbit hero__orbit--1">
+            <span class="hero__chip" data-tip="Python">Py</span>
+          </div>
+          <div class="hero__orbit hero__orbit--2">
+            <span class="hero__chip" data-tip="TensorFlow">TF</span>
+          </div>
+          <div class="hero__orbit hero__orbit--3">
+            <span class="hero__chip" data-tip="AWS">AWS</span>
+          </div>
+          <div class="hero__orbit hero__orbit--4">
+            <span class="hero__chip" data-tip="Git">Git</span>
+          </div>
+          <div class="hero__orbit hero__orbit--5">
+            <span class="hero__chip" data-tip="Machine Learning">ML</span>
+          </div>
+          <div class="hero__orbit hero__orbit--6">
+            <span class="hero__chip" data-tip="Artificial Intelligence">AI</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <a href="#about" class="hero__scroll" aria-label="Scroll to About section">
+      <span>scroll</span>
+      <svg width="14" height="20" viewBox="0 0 14 20"><rect x="1" y="1" width="12" height="18" rx="6" fill="none" stroke="currentColor" stroke-width="1.2"/><circle class="hero__scroll-dot" cx="7" cy="6" r="2" fill="currentColor"/></svg>
+    </a>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="about" id="about">
+    <div class="section-inner">
+      <p class="section-eyebrow" data-reveal>01 — About</p>
+      <h2 class="section-heading" data-reveal>Someone who'd rather ship a working model than talk about one.</h2>
+
+      <div class="about__grid">
+        <div class="about__text" data-reveal>
+          <p>I'm a B.Tech Computer Science student specializing in AI &amp; ML at Graphic Era University, currently in my second year. Most of what I know, I learned by breaking something first — a gesture-recognition pipeline that misfired on every third frame, a model that overfit until I actually understood why.</p>
+          <p>I care about the gap between a notebook that works and a system someone can actually rely on. That means writing tests, structuring code so the next person (often future me) can read it, and treating "it works on my machine" as a starting point, not a finish line.</p>
+          <p>Right now I'm deepening my machine learning fundamentals, working through computer vision problems, and getting comfortable with AWS — while looking for an internship where I can trade textbook problems for real ones.</p>
+        </div>
+
+        <div class="about__cards" data-reveal data-reveal-delay="100">
+          <div class="glass-card about__card">
+            <div class="about__card-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/></svg>
+            </div>
+            <h3>AI &amp; ML</h3>
+            <p>Building and debugging real models — from classical ML pipelines to computer vision systems that run in real time.</p>
+          </div>
+          <div class="glass-card about__card">
+            <div class="about__card-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8Z" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>Problem Solving</h3>
+            <p>Comfortable sitting with a bug until I understand the root cause, not just the symptom.</p>
+          </div>
+          <div class="glass-card about__card">
+            <div class="about__card-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 19a4 4 0 0 1-1-7.87A5 5 0 0 1 15 8a4.5 4.5 0 0 1 1 8.9M8 19h9" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>Cloud Computing</h3>
+            <p>Learning AWS fundamentals to take models beyond a local script and into something deployable.</p>
+          </div>
+          <div class="glass-card about__card">
+            <div class="about__card-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M4 4.5A2.5 2.5 0 0 1 6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15Z" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>Continuous Learning</h3>
+            <p>Currently working through DSA, computer vision, and cloud fundamentals — one real project at a time.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SKILLS ============ -->
+  <section class="skills" id="skills">
+    <div class="section-inner">
+      <p class="section-eyebrow" data-reveal>02 — Skills</p>
+      <h2 class="section-heading" data-reveal>The stack behind the projects.</h2>
+
+      <div class="skills__grid" data-reveal data-reveal-delay="80">
+        <!-- populated via JS icon map for consistency -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ LEARNING JOURNEY ============ -->
+  <section class="journey" id="journey">
+    <div class="section-inner">
+      <p class="section-eyebrow" data-reveal>03 — Journey</p>
+      <h2 class="section-heading" data-reveal>How I got from "hello world" to here.</h2>
+
+      <div class="timeline">
+        <div class="timeline__line" aria-hidden="true"><div class="timeline__line-fill" id="timelineFill"></div></div>
+
+        <div class="timeline__item" data-reveal>
+          <div class="timeline__dot"></div>
+          <div class="glass-card timeline__card">
+            <span class="timeline__tag">Foundations</span>
+            <h3>Started B.Tech CSE (AI &amp; ML)</h3>
+            <p>Began the degree at Graphic Era University, specializing in AI &amp; ML from year one.</p>
+          </div>
+        </div>
+
+        <div class="timeline__item" data-reveal>
+          <div class="timeline__dot"></div>
+          <div class="glass-card timeline__card">
+            <span class="timeline__tag">Language</span>
+            <h3>Learned Python</h3>
+            <p>Built a real working foundation — data structures, OOP, and enough fluency to stop translating from other languages in my head.</p>
+          </div>
+        </div>
+
+        <div class="timeline__item" data-reveal>
+          <div class="timeline__dot"></div>
+          <div class="glass-card timeline__card">
+            <span class="timeline__tag">Core CS</span>
+            <h3>Started Data Structures &amp; Algorithms</h3>
+            <p>Working through arrays, linked lists, stacks, and hashing — the concepts, not just problems to memorize.</p>
+          </div>
+        </div>
+
+        <div class="timeline__item" data-reveal>
+          <div class="timeline__dot"></div>
+          <div class="glass-card timeline__card">
+            <span class="timeline__tag">Building</span>
+            <h3>Built Python Projects</h3>
+            <p>Moved from tutorials to shipped work — a spam classifier and a house price predictor, both with real pipelines and Streamlit apps.</p>
+          </div>
+        </div>
+
+        <div class="timeline__item" data-reveal>
+          <div class="timeline__dot"></div>
+          <div class="glass-card timeline__card">
+            <span class="timeline__tag">ML</span>
+            <h3>Started Machine Learning</h3>
+            <p>Went from scikit-learn tutorials to building and evaluating models on real, messy data.</p>
+          </div>
+        </div>
+
+        <div class="timeline__item" data-reveal>
+          <div class="timeline__dot"></div>
+          <div class="glass-card timeline__card">
+            <span class="timeline__tag">Cloud</span>
+            <h3>Learning AWS</h3>
+            <p>Currently building fundamentals in cloud infrastructure to deploy models beyond a local machine.</p>
+          </div>
+        </div>
+
+        <div class="timeline__item" data-reveal>
+          <div class="timeline__dot"></div>
+          <div class="glass-card timeline__card">
+            <span class="timeline__tag">Vision</span>
+            <h3>Learning Computer Vision</h3>
+            <p>Built a real-time hand gesture recognition system with MediaPipe and OpenCV — my most technically demanding project yet.</p>
+          </div>
+        </div>
+
+        <div class="timeline__item timeline__item--current" data-reveal>
+          <div class="timeline__dot timeline__dot--current"></div>
+          <div class="glass-card timeline__card timeline__card--current">
+            <span class="timeline__tag timeline__tag--live">Now</span>
+            <h3>Preparing for AI/ML Internship</h3>
+            <p>Sharpening my portfolio, deepening ML fundamentals, and actively looking for an internship where I can work on real-world problems.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS ============ -->
+  <section class="projects" id="projects">
+    <div class="section-inner">
+      <p class="section-eyebrow" data-reveal>04 — Featured Work</p>
+      <h2 class="section-heading" data-reveal>Projects, not just repositories.</h2>
+
+      <div class="projects__grid">
+
+        <article class="project-card project-card--featured glass-card" data-reveal>
+          <div class="project-card__media">
+            <div class="project-card__visual project-card__visual--gesture">
+              <svg viewBox="0 0 400 240" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
+                <defs>
+                  <linearGradient id="pcGrad1" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#8B5CF6" stop-opacity="0.5"/>
+                    <stop offset="100%" stop-color="#3B82F6" stop-opacity="0.3"/>
+                  </linearGradient>
+                </defs>
+                <rect width="400" height="240" fill="#0b1120"/>
+                <g opacity="0.9">
+                  <circle cx="200" cy="120" r="55" fill="none" stroke="url(#pcGrad1)" stroke-width="2"/>
+                  <circle cx="200" cy="120" r="90" fill="none" stroke="url(#pcGrad1)" stroke-width="1" stroke-dasharray="4 6"/>
+                  <path d="M170 150 Q175 95 195 90 Q198 70 210 72 Q214 55 226 60 Q232 48 242 58 Q248 70 240 100 L235 150 Z" fill="url(#pcGrad1)" stroke="#8B5CF6" stroke-width="1.5"/>
+                </g>
+              </svg>
+            </div>
+            <span class="project-card__badge">Flagship</span>
+          </div>
+          <div class="project-card__body">
+            <h3>AI Gesture Control for Google Slides</h3>
+            <p>Control presentation slides in real time using nothing but hand gestures — built with a custom stabilization layer to eliminate flicker and single-frame misfires.</p>
+            <div class="project-card__tech">
+              <span>Python</span><span>OpenCV</span><span>MediaPipe</span>
+            </div>
+            <div class="project-card__links">
+              <a href="https://github.com/Shivanshbajaj1/AI-Gesture-Control-Slides" target="_blank" rel="noopener" class="project-card__link">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.79-.25.79-.55 0-.27-.01-1.17-.02-2.12-3.2.7-3.87-1.36-3.87-1.36-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.78 1.19 1.78 1.19 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.68 0-1.25.45-2.28 1.19-3.08-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.21-1.49 3.18-1.18 3.18-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.08 0 4.41-2.69 5.38-5.25 5.67.41.35.78 1.05.78 2.11 0 1.53-.01 2.76-.01 3.13 0 .3.21.66.79.55A10.52 10.52 0 0 0 23.5 12c0-6.35-5.15-11.5-11.5-11.5Z"/></svg>
+                Code
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card glass-card" data-reveal data-reveal-delay="60">
+          <div class="project-card__media">
+            <div class="project-card__visual project-card__visual--pbl">
+              <svg viewBox="0 0 400 240" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
+                <rect width="400" height="240" fill="#0b1120"/>
+                <polyline points="40,190 100,140 160,165 220,90 280,110 360,50" fill="none" stroke="#3B82F6" stroke-width="2.5" opacity="0.85"/>
+                <g fill="#8B5CF6" opacity="0.9">
+                  <circle cx="40" cy="190" r="4"/><circle cx="100" cy="140" r="4"/><circle cx="160" cy="165" r="4"/><circle cx="220" cy="90" r="4"/><circle cx="280" cy="110" r="4"/><circle cx="360" cy="50" r="4"/>
+                </g>
+              </svg>
+            </div>
+          </div>
+          <div class="project-card__body">
+            <h3>Python PBL</h3>
+            <p>End-to-end machine learning pipeline covering preprocessing, exploratory analysis, PCA, and classification on real datasets.</p>
+            <div class="project-card__tech">
+              <span>Python</span><span>scikit-learn</span><span>Pandas</span>
+            </div>
+            <div class="project-card__links">
+              <a href="https://github.com/Shivanshbajaj1/Python_PBL" target="_blank" rel="noopener" class="project-card__link">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.79-.25.79-.55 0-.27-.01-1.17-.02-2.12-3.2.7-3.87-1.36-3.87-1.36-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.78 1.19 1.78 1.19 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.68 0-1.25.45-2.28 1.19-3.08-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.21-1.49 3.18-1.18 3.18-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.08 0 4.41-2.69 5.38-5.25 5.67.41.35.78 1.05.78 2.11 0 1.53-.01 2.76-.01 3.13 0 .3.21.66.79.55A10.52 10.52 0 0 0 23.5 12c0-6.35-5.15-11.5-11.5-11.5Z"/></svg>
+                Code
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card glass-card" data-reveal data-reveal-delay="120">
+          <div class="project-card__media">
+            <div class="project-card__visual project-card__visual--portfolio">
+              <svg viewBox="0 0 400 240" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
+                <rect width="400" height="240" fill="#0b1120"/>
+                <rect x="40" y="40" width="320" height="160" rx="10" fill="none" stroke="#EC4899" stroke-width="1.5" opacity="0.6"/>
+                <rect x="60" y="60" width="120" height="14" rx="4" fill="#8B5CF6" opacity="0.7"/>
+                <rect x="60" y="90" width="280" height="8" rx="4" fill="#3B82F6" opacity="0.4"/>
+                <rect x="60" y="108" width="200" height="8" rx="4" fill="#3B82F6" opacity="0.4"/>
+                <rect x="60" y="140" width="80" height="40" rx="8" fill="#8B5CF6" opacity="0.35"/>
+                <rect x="152" y="140" width="80" height="40" rx="8" fill="#3B82F6" opacity="0.35"/>
+                <rect x="244" y="140" width="80" height="40" rx="8" fill="#EC4899" opacity="0.35"/>
+              </svg>
+            </div>
+          </div>
+          <div class="project-card__body">
+            <h3>Portfolio Website</h3>
+            <p>This site — a hand-built, dependency-free portfolio with custom animation, glassmorphism, and a particle background.</p>
+            <div class="project-card__tech">
+              <span>HTML5</span><span>CSS3</span><span>JavaScript</span>
+            </div>
+            <div class="project-card__links">
+              <a href="https://github.com/Shivanshbajaj1" target="_blank" rel="noopener" class="project-card__link">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.79-.25.79-.55 0-.27-.01-1.17-.02-2.12-3.2.7-3.87-1.36-3.87-1.36-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.78 1.19 1.78 1.19 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.68 0-1.25.45-2.28 1.19-3.08-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.21-1.49 3.18-1.18 3.18-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.08 0 4.41-2.69 5.38-5.25 5.67.41.35.78 1.05.78 2.11 0 1.53-.01 2.76-.01 3.13 0 .3.21.66.79.55A10.52 10.52 0 0 0 23.5 12c0-6.35-5.15-11.5-11.5-11.5Z"/></svg>
+                Code
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card glass-card" data-reveal>
+          <div class="project-card__media">
+            <div class="project-card__visual project-card__visual--chatbot">
+              <svg viewBox="0 0 400 240" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
+                <rect width="400" height="240" fill="#0b1120"/>
+                <rect x="70" y="60" width="180" height="44" rx="16" fill="#111827" stroke="#3B82F6" stroke-width="1.5"/>
+                <rect x="150" y="120" width="180" height="44" rx="16" fill="#8B5CF6" opacity="0.35"/>
+                <rect x="70" y="170" width="140" height="30" rx="14" fill="#111827" stroke="#3B82F6" stroke-width="1.5"/>
+              </svg>
+            </div>
+          </div>
+          <div class="project-card__body">
+            <h3>CodeAlpha Basic Chatbot</h3>
+            <p>A rule-based conversational chatbot built in Python, focused on clean intent-matching logic.</p>
+            <div class="project-card__tech">
+              <span>Python</span><span>NLP</span>
+            </div>
+            <div class="project-card__links">
+              <a href="https://github.com/Shivanshbajaj1" target="_blank" rel="noopener" class="project-card__link">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.79-.25.79-.55 0-.27-.01-1.17-.02-2.12-3.2.7-3.87-1.36-3.87-1.36-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.78 1.19 1.78 1.19 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.68 0-1.25.45-2.28 1.19-3.08-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.21-1.49 3.18-1.18 3.18-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.08 0 4.41-2.69 5.38-5.25 5.67.41.35.78 1.05.78 2.11 0 1.53-.01 2.76-.01 3.13 0 .3.21.66.79.55A10.52 10.52 0 0 0 23.5 12c0-6.35-5.15-11.5-11.5-11.5Z"/></svg>
+                Code
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card glass-card" data-reveal data-reveal-delay="60">
+          <div class="project-card__media">
+            <div class="project-card__visual project-card__visual--extractor">
+              <svg viewBox="0 0 400 240" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
+                <rect width="400" height="240" fill="#0b1120"/>
+                <rect x="60" y="50" width="280" height="16" rx="4" fill="#3B82F6" opacity="0.3"/>
+                <rect x="60" y="80" width="220" height="10" rx="4" fill="#3B82F6" opacity="0.25"/>
+                <rect x="60" y="100" width="200" rx="4" height="10" fill="#3B82F6" opacity="0.25"/>
+                <rect x="60" y="128" width="150" height="18" rx="5" fill="#EC4899" opacity="0.5"/>
+                <rect x="60" y="160" width="180" height="10" rx="4" fill="#3B82F6" opacity="0.25"/>
+              </svg>
+            </div>
+          </div>
+          <div class="project-card__body">
+            <h3>CodeAlpha Email Extractor</h3>
+            <p>A regex-driven utility that scans raw text and reliably pulls out valid email addresses.</p>
+            <div class="project-card__tech">
+              <span>Python</span><span>Regex</span>
+            </div>
+            <div class="project-card__links">
+              <a href="https://github.com/Shivanshbajaj1" target="_blank" rel="noopener" class="project-card__link">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.79-.25.79-.55 0-.27-.01-1.17-.02-2.12-3.2.7-3.87-1.36-3.87-1.36-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.78 1.19 1.78 1.19 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.68 0-1.25.45-2.28 1.19-3.08-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.21-1.49 3.18-1.18 3.18-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.08 0 4.41-2.69 5.38-5.25 5.67.41.35.78 1.05.78 2.11 0 1.53-.01 2.76-.01 3.13 0 .3.21.66.79.55A10.52 10.52 0 0 0 23.5 12c0-6.35-5.15-11.5-11.5-11.5Z"/></svg>
+                Code
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ACHIEVEMENTS ============ -->
+  <section class="achievements" id="achievements">
+    <div class="section-inner">
+      <div class="achievements__grid">
+        <div class="achievement" data-reveal>
+          <span class="achievement__num" data-count="5">0</span>
+          <span class="achievement__label">Projects Built</span>
+        </div>
+        <div class="achievement" data-reveal data-reveal-delay="60">
+          <span class="achievement__num" data-count="7">0</span>
+          <span class="achievement__label">GitHub Repositories</span>
+        </div>
+        <div class="achievement" data-reveal data-reveal-delay="120">
+          <span class="achievement__num" data-count="2">0</span>
+          <span class="achievement__label">Certifications</span>
+        </div>
+        <div class="achievement" data-reveal data-reveal-delay="180">
+          <span class="achievement__num" data-count="2">0</span>
+          <span class="achievement__label">Years into B.Tech</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ GITHUB ============ -->
+  <section class="github" id="github">
+    <div class="section-inner">
+      <p class="section-eyebrow" data-reveal>05 — GitHub</p>
+      <h2 class="section-heading" data-reveal>The commit history tells the real story.</h2>
+
+      <div class="github__grid" data-reveal data-reveal-delay="80">
+        <div class="glass-card github__card github__card--stats">
+          <img src="https://github-readme-stats.vercel.app/api?username=Shivanshbajaj1&show_icons=true&theme=transparent&title_color=8B5CF6&icon_color=3B82F6&text_color=94A3B8&bg_color=00000000&border_color=232946&hide_border=true" alt="Shivansh Bajaj's GitHub stats" loading="lazy">
+        </div>
+        <div class="glass-card github__card github__card--langs">
+          <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Shivanshbajaj1&layout=compact&theme=transparent&title_color=8B5CF6&text_color=94A3B8&bg_color=00000000&border_color=232946&hide_border=true" alt="Shivansh Bajaj's most-used languages" loading="lazy">
+        </div>
+        <div class="glass-card github__card github__card--streak">
+          <img src="https://github-readme-streak-stats.herokuapp.com/?user=Shivanshbajaj1&theme=transparent&background=00000000&stroke=232946&ring=8B5CF6&fire=EC4899&currStreakLabel=F8FAFC&sideLabels=94A3B8&dates=64748B&border=232946" alt="Shivansh Bajaj's GitHub streak" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="contact" id="contact">
+    <div class="section-inner">
+      <p class="section-eyebrow" data-reveal>06 — Contact</p>
+      <h2 class="section-heading section-heading--center" data-reveal>Let's build something amazing together.</h2>
+      <p class="contact__sub" data-reveal>Open to AI/ML internships, software engineering roles, and interesting open-source problems.</p>
+
+      <div class="contact__grid" data-reveal data-reveal-delay="80">
+        <a href="https://github.com/Shivanshbajaj1" target="_blank" rel="noopener" class="glass-card contact__card">
+          <div class="contact__card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.79-.25.79-.55 0-.27-.01-1.17-.02-2.12-3.2.7-3.87-1.36-3.87-1.36-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.78 1.19 1.78 1.19 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.68 0-1.25.45-2.28 1.19-3.08-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.21-1.49 3.18-1.18 3.18-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.08 0 4.41-2.69 5.38-5.25 5.67.41.35.78 1.05.78 2.11 0 1.53-.01 2.76-.01 3.13 0 .3.21.66.79.55A10.52 10.52 0 0 0 23.5 12c0-6.35-5.15-11.5-11.5-11.5Z"/></svg>
+          </div>
+          <h3>GitHub</h3>
+          <p>@Shivanshbajaj1</p>
+        </a>
+
+        <a href="https://linkedin.com/in/shivansh-bajaj-a433b7371" target="_blank" rel="noopener" class="glass-card contact__card">
+          <div class="contact__card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.8 0 0 .78 0 1.75v20.5C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.75V1.75C24 .78 23.2 0 22.22 0Z"/></svg>
+          </div>
+          <h3>LinkedIn</h3>
+          <p>Shivansh Bajaj</p>
+        </a>
+
+        <a href="mailto:shivanshbajaj276@gmail.com" class="glass-card contact__card">
+          <div class="contact__card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 5h18v14H3V5Z"/><path d="m3 6 9 7 9-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Email</h3>
+          <p>shivanshbajaj276@gmail.com</p>
+        </a>
+
+        <div class="glass-card contact__card contact__card--static">
+          <div class="contact__card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <h3>Location</h3>
+          <p>Delhi, India</p>
+        </div>
+      </div>
+
+      <div class="contact__cta" data-reveal data-reveal-delay="140">
+        <a href="mailto:shivanshbajaj276@gmail.com" class="btn btn--primary btn--lg">
+          <span>Let's talk</span>
+          <svg width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="section-inner footer__inner">
+    <p>Designed &amp; developed by <span>Shivansh Bajaj</span></p>
+    <p class="footer__year">© 2026</p>
+  </div>
+</footer>
+
+<!-- ============ BACK TO TOP ============ -->
+<button class="to-top" id="toTop" aria-label="Back to top">
+  <svg width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M8 13V3M3 7l5-5 5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
+
+<script src="js/particles.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
