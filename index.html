@@ -3,8 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shivansh Bajaj — AI/ML Engineer</title>
-<meta name="description" content="Shivansh Bajaj — AI/ML Engineering student building computer vision and machine learning software. Portfolio, projects, and contact.">
+<meta name="theme-color" content="#070711">
+<meta property="og:title" content="Shivansh Bajaj | Developer Portfolio">
+<meta property="og:description" content="C++ · DSA · AI/ML · Computer Vision · Practical projects">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://shivanshbajaj1.github.io/portfolio-website/">
+<title>Shivansh Bajaj | C++ · DSA · AI/ML Developer</title>
+<meta name="description" content="Shivansh Bajaj — B.Tech CSE (AI & ML) student building practical AI/ML, computer vision, automation, and cybersecurity projects.">
 
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,6 +21,8 @@
 <link rel="stylesheet" href="css/main.css">
 <link rel="stylesheet" href="css/animations.css">
 <link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="css/refresh.css">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 </head>
 <body>
 
@@ -60,7 +67,8 @@
       <a href="#about" class="nav__link" data-section="about">About</a>
       <a href="#skills" class="nav__link" data-section="skills">Skills</a>
       <a href="#projects" class="nav__link" data-section="projects">Projects</a>
-      <a href="#journey" class="nav__link" data-section="journey">Journey</a>
+      <a href="#journey" class="nav__link" data-section="journey">Experience</a>
+      <a href="#github" class="nav__link" data-section="github">GitHub</a>
       <a href="#contact" class="nav__link" data-section="contact">Contact</a>
     </nav>
 
@@ -83,7 +91,8 @@
     <a href="#about" class="mobile-menu__link">About</a>
     <a href="#skills" class="mobile-menu__link">Skills</a>
     <a href="#projects" class="mobile-menu__link">Projects</a>
-    <a href="#journey" class="mobile-menu__link">Journey</a>
+    <a href="#journey" class="mobile-menu__link">Experience</a>
+    <a href="#github" class="mobile-menu__link">GitHub</a>
     <a href="#contact" class="mobile-menu__link">Contact</a>
     <a href="assets/Shivansh_Bajaj_Resume.pdf" class="btn btn--primary" download style="margin-top:2rem;">Download Resume</a>
   </nav>
@@ -96,7 +105,7 @@
     <div class="hero__inner">
 
       <div class="hero__left" data-reveal>
-        <p class="hero__eyebrow"><span class="hero__eyebrow-dot"></span>Available for AI/ML internships</p>
+        <p class="hero__eyebrow"><span class="hero__eyebrow-dot"></span>Open to SWE & AI/ML internships</p>
 
         <h1 class="hero__heading">
           <span class="hero__hi">Hi, I'm</span>
@@ -104,21 +113,24 @@
         </h1>
 
         <div class="hero__typewriter">
-          <span class="hero__typewriter-prefix">I build as a</span>
+          <span class="hero__typewriter-prefix">Currently building</span>
           <span class="hero__typewriter-text" id="typewriter"></span><span class="hero__cursor">|</span>
         </div>
 
         <p class="hero__desc">
-          Building intelligent software that turns machine learning models into things people can actually use — from vision systems that respond to a hand, to pipelines that turn raw data into decisions.
+          B.Tech CSE (AI & ML) student building practical software across C++/DSA, AI/ML, computer vision and automation. I like projects that solve a real problem—and code I can explain, test and improve.
         </p>
 
         <div class="hero__actions">
           <a href="#projects" class="btn btn--primary">
-            <span>Explore Projects</span>
+            <span>Explore My Work</span>
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
           <a href="assets/Shivansh_Bajaj_Resume.pdf" class="btn btn--ghost" download>
             <span>Download Resume</span>
+          </a>
+          <a href="https://github.com/Shivanshbajaj1?tab=repositories" target="_blank" rel="noopener" class="btn btn--ghost">
+            <span>All Repositories</span>
           </a>
         </div>
 
@@ -138,27 +150,17 @@
       <div class="hero__right" data-reveal data-reveal-delay="120">
         <div class="hero__portrait">
           <div class="hero__portrait-ring"></div>
-          <div class="hero__portrait-img">
-            <svg viewBox="0 0 200 200" width="100%" height="100%" role="img" aria-label="Abstract portrait avatar">
-              <defs>
-                <linearGradient id="avatarGrad" x1="0" y1="0" x2="1" y2="1">
-                  <stop offset="0%" stop-color="#8B5CF6"/>
-                  <stop offset="100%" stop-color="#3B82F6"/>
-                </linearGradient>
-              </defs>
-              <circle cx="100" cy="100" r="100" fill="#111827"/>
-              <circle cx="100" cy="82" r="34" fill="url(#avatarGrad)" opacity="0.9"/>
-              <path d="M40 190c6-42 34-64 60-64s54 22 60 64" fill="url(#avatarGrad)" opacity="0.9"/>
-            </svg>
+          <div class="hero__portrait-img hero__portrait-img--initials" aria-label="SB monogram">
+            <div class="hero__monogram"><span>SB</span><small>BUILD · LEARN · SHIP</small></div>
           </div>
           <div class="hero__orbit hero__orbit--1">
             <span class="hero__chip" data-tip="Python">Py</span>
           </div>
           <div class="hero__orbit hero__orbit--2">
-            <span class="hero__chip" data-tip="TensorFlow">TF</span>
+            <span class="hero__chip" data-tip="C++">C++</span>
           </div>
           <div class="hero__orbit hero__orbit--3">
-            <span class="hero__chip" data-tip="AWS">AWS</span>
+            <span class="hero__chip" data-tip="DSA">DSA</span>
           </div>
           <div class="hero__orbit hero__orbit--4">
             <span class="hero__chip" data-tip="Git">Git</span>
@@ -167,7 +169,7 @@
             <span class="hero__chip" data-tip="Machine Learning">ML</span>
           </div>
           <div class="hero__orbit hero__orbit--6">
-            <span class="hero__chip" data-tip="Artificial Intelligence">AI</span>
+            <span class="hero__chip" data-tip="Computer Vision">CV</span>
           </div>
         </div>
       </div>
@@ -184,43 +186,39 @@
   <section class="about" id="about">
     <div class="section-inner">
       <p class="section-eyebrow" data-reveal>01 — About</p>
-      <h2 class="section-heading" data-reveal>Someone who'd rather ship a working model than talk about one.</h2>
-
+      <h2 class="section-heading" data-reveal>I build to learn — and learn by shipping.</h2>
       <div class="about__grid">
         <div class="about__text" data-reveal>
-          <p>I'm a B.Tech Computer Science student specializing in AI &amp; ML at Graphic Era University, currently in my second year. Most of what I know, I learned by breaking something first — a gesture-recognition pipeline that misfired on every third frame, a model that overfit until I actually understood why.</p>
-          <p>I care about the gap between a notebook that works and a system someone can actually rely on. That means writing tests, structuring code so the next person (often future me) can read it, and treating "it works on my machine" as a starting point, not a finish line.</p>
-          <p>Right now I'm deepening my machine learning fundamentals, working through computer vision problems, and getting comfortable with AWS — while looking for an internship where I can trade textbook problems for real ones.</p>
+          <p>I'm a B.Tech CSE student specializing in <strong>Artificial Intelligence &amp; Machine Learning</strong> at Graphic Era Deemed to be University. I'm growing my software engineering foundations while building projects that make concepts practical.</p>
+          <p>My current priority is <strong>C++ and Data Structures &amp; Algorithms</strong>—understanding OOP, tracing code, choosing the right data structure, and writing programs I can explain instead of just copy.</p>
+          <p>Alongside that, I'm building <strong>ScamShield</strong>, exploring explainable AI and cybersecurity, and improving projects in computer vision, data analysis and automation. I'm open to internship opportunities where I can learn from real engineering work.</p>
+          <div class="about__badge-row" aria-label="Current focus">
+            <span class="focus-badge focus-badge--violet">C++ &amp; DSA</span>
+            <span class="focus-badge focus-badge--cyan">AI / ML</span>
+            <span class="focus-badge focus-badge--pink">Computer Vision</span>
+            <span class="focus-badge focus-badge--green">Internship Ready to Learn</span>
+          </div>
         </div>
-
         <div class="about__cards" data-reveal data-reveal-delay="100">
           <div class="glass-card about__card">
-            <div class="about__card-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/></svg>
-            </div>
-            <h3>AI &amp; ML</h3>
-            <p>Building and debugging real models — from classical ML pipelines to computer vision systems that run in real time.</p>
+            <div class="about__card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2 21 7v10l-9 5-9-5V7l9-5Z M8 12h8 M12 8v8"/></svg></div>
+            <h3>C++ &amp; DSA</h3>
+            <p>Strengthening OOP, core data structures, algorithmic thinking, and debugging fundamentals.</p>
           </div>
           <div class="glass-card about__card">
-            <div class="about__card-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8Z" stroke-linejoin="round"/></svg>
-            </div>
-            <h3>Problem Solving</h3>
-            <p>Comfortable sitting with a bug until I understand the root cause, not just the symptom.</p>
+            <div class="about__card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 3h18v18H3z M7 15l3-4 3 2 4-6"/></svg></div>
+            <h3>Applied AI / ML</h3>
+            <p>Building and evaluating practical ML applications, including interactive model comparison and image classification.</p>
           </div>
           <div class="glass-card about__card">
-            <div class="about__card-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 19a4 4 0 0 1-1-7.87A5 5 0 0 1 15 8a4.5 4.5 0 0 1 1 8.9M8 19h9" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </div>
-            <h3>Cloud Computing</h3>
-            <p>Learning AWS fundamentals to take models beyond a local script and into something deployable.</p>
+            <div class="about__card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg></div>
+            <h3>Computer Vision</h3>
+            <p>Using OpenCV and MediaPipe in interactive gesture-control work and exploring visual explanations.</p>
           </div>
           <div class="glass-card about__card">
-            <div class="about__card-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M4 4.5A2.5 2.5 0 0 1 6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15Z" stroke-linejoin="round"/></svg>
-            </div>
-            <h3>Continuous Learning</h3>
-            <p>Currently working through DSA, computer vision, and cloud fundamentals — one real project at a time.</p>
+            <div class="about__card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 5h16M4 12h16M4 19h16"/><circle cx="8" cy="5" r="2" fill="currentColor"/><circle cx="15" cy="12" r="2" fill="currentColor"/><circle cx="11" cy="19" r="2" fill="currentColor"/></svg></div>
+            <h3>Building in Public</h3>
+            <p>Improving project structure, documentation, tests and demos, one iteration at a time.</p>
           </div>
         </div>
       </div>
@@ -230,11 +228,17 @@
   <!-- ============ SKILLS ============ -->
   <section class="skills" id="skills">
     <div class="section-inner">
-      <p class="section-eyebrow" data-reveal>02 — Skills</p>
-      <h2 class="section-heading" data-reveal>The stack behind the projects.</h2>
-
+      <p class="section-eyebrow" data-reveal>02 — Skill Set</p>
+      <h2 class="section-heading" data-reveal>What I use. What I'm learning. What I'm building.</h2>
+      <p class="section-intro" data-reveal>Honest skill levels—hands-on project experience where I've built something, and “building” where I'm actively strengthening the fundamentals.</p>
+      <div class="skills__marquee" aria-label="Core skills">
+        <div class="skills__marquee-track">
+          <span>C++</span><span>Data Structures &amp; Algorithms</span><span>Python</span><span>OOP</span><span>Machine Learning</span><span>OpenCV</span><span>MediaPipe</span><span>Streamlit</span><span>Git &amp; GitHub</span>
+          <span aria-hidden="true">C++</span><span aria-hidden="true">Data Structures &amp; Algorithms</span><span aria-hidden="true">Python</span><span aria-hidden="true">OOP</span><span aria-hidden="true">Machine Learning</span><span aria-hidden="true">OpenCV</span><span aria-hidden="true">MediaPipe</span><span aria-hidden="true">Streamlit</span><span aria-hidden="true">Git &amp; GitHub</span>
+        </div>
+      </div>
       <div class="skills__grid" data-reveal data-reveal-delay="80">
-        <!-- populated via JS icon map for consistency -->
+        <!-- Skills are rendered from js/main.js; labels intentionally describe learning stage. -->
       </div>
     </div>
   </section>
@@ -242,81 +246,63 @@
   <!-- ============ LEARNING JOURNEY ============ -->
   <section class="journey" id="journey">
     <div class="section-inner">
-      <p class="section-eyebrow" data-reveal>03 — Journey</p>
-      <h2 class="section-heading" data-reveal>How I got from "hello world" to here.</h2>
-
+      <p class="section-eyebrow" data-reveal>03 — Experience &amp; Journey</p>
+      <h2 class="section-heading" data-reveal>Learning paths, program work and what I'm building next.</h2>
+      <p class="section-intro" data-reveal>Internship-related work is linked to its public repositories. I list completed deliverables—not unverified certificates or invented impact numbers.</p>
       <div class="timeline">
         <div class="timeline__line" aria-hidden="true"><div class="timeline__line-fill" id="timelineFill"></div></div>
-
         <div class="timeline__item" data-reveal>
           <div class="timeline__dot"></div>
           <div class="glass-card timeline__card">
-            <span class="timeline__tag">Foundations</span>
-            <h3>Started B.Tech CSE (AI &amp; ML)</h3>
-            <p>Began the degree at Graphic Era University, specializing in AI &amp; ML from year one.</p>
+            <span class="timeline__tag">Education</span>
+            <h3>B.Tech CSE — AI &amp; ML</h3>
+            <p>Graphic Era Deemed to be University · Building foundations in programming, data structures, OOP and AI/ML.</p>
+            <div class="timeline__links"><a class="timeline__link" href="https://www.geu.ac.in/" target="_blank" rel="noopener">University ↗</a></div>
           </div>
         </div>
-
         <div class="timeline__item" data-reveal>
           <div class="timeline__dot"></div>
           <div class="glass-card timeline__card">
-            <span class="timeline__tag">Language</span>
-            <h3>Learned Python</h3>
-            <p>Built a real working foundation — data structures, OOP, and enough fluency to stop translating from other languages in my head.</p>
+            <span class="timeline__tag timeline__tag--program">Internship project work</span>
+            <h3>Python Programming Internship — CodeAlpha</h3>
+            <p>Public project repositories document two Python tasks: an email extractor using regular expressions and file handling, and a rule-based chatbot with command-based responses.</p>
+            <div class="timeline__links">
+              <a class="timeline__link" href="https://github.com/Shivanshbajaj1/CodeAlpha_EmailExtractor" target="_blank" rel="noopener">Email Extractor ↗</a>
+              <a class="timeline__link" href="https://github.com/Shivanshbajaj1/CodeAlpha_BasicChatbot" target="_blank" rel="noopener">Basic Chatbot ↗</a>
+            </div>
           </div>
         </div>
-
         <div class="timeline__item" data-reveal>
           <div class="timeline__dot"></div>
           <div class="glass-card timeline__card">
-            <span class="timeline__tag">Core CS</span>
-            <h3>Started Data Structures &amp; Algorithms</h3>
-            <p>Working through arrays, linked lists, stacks, and hashing — the concepts, not just problems to memorize.</p>
+            <span class="timeline__tag timeline__tag--program">Internship task repository</span>
+            <h3>Python Development Tasks — Cognifyz Technologies</h3>
+            <p>A public repository of structured Python tasks covering validation, string processing, control flow, a quiz, password-strength checks and file organization.</p>
+            <div class="timeline__links"><a class="timeline__link" href="https://github.com/Shivanshbajaj1/Cognifyz-Python-Internship" target="_blank" rel="noopener">View task repository ↗</a></div>
           </div>
         </div>
-
         <div class="timeline__item" data-reveal>
           <div class="timeline__dot"></div>
           <div class="glass-card timeline__card">
-            <span class="timeline__tag">Building</span>
-            <h3>Built Python Projects</h3>
-            <p>Moved from tutorials to shipped work — a spam classifier and a house price predictor, both with real pipelines and Streamlit apps.</p>
+            <span class="timeline__tag">Applied projects</span>
+            <h3>From model experiments to usable tools</h3>
+            <p>Built projects including an interactive ML Playground, a CIFAKE image classifier with Grad-CAM, a hand-gesture presentation controller, and a file-organization utility.</p>
+            <div class="timeline__links">
+              <a class="timeline__link" href="https://github.com/Shivanshbajaj1/ML-Playground" target="_blank" rel="noopener">ML Playground ↗</a>
+              <a class="timeline__link" href="https://github.com/Shivanshbajaj1/CIFAKE" target="_blank" rel="noopener">CIFAKE ↗</a>
+            </div>
           </div>
         </div>
-
-        <div class="timeline__item" data-reveal>
-          <div class="timeline__dot"></div>
-          <div class="glass-card timeline__card">
-            <span class="timeline__tag">ML</span>
-            <h3>Started Machine Learning</h3>
-            <p>Went from scikit-learn tutorials to building and evaluating models on real, messy data.</p>
-          </div>
-        </div>
-
-        <div class="timeline__item" data-reveal>
-          <div class="timeline__dot"></div>
-          <div class="glass-card timeline__card">
-            <span class="timeline__tag">Cloud</span>
-            <h3>Learning AWS</h3>
-            <p>Currently building fundamentals in cloud infrastructure to deploy models beyond a local machine.</p>
-          </div>
-        </div>
-
-        <div class="timeline__item" data-reveal>
-          <div class="timeline__dot"></div>
-          <div class="glass-card timeline__card">
-            <span class="timeline__tag">Vision</span>
-            <h3>Learning Computer Vision</h3>
-            <p>Built a real-time hand gesture recognition system with MediaPipe and OpenCV — my most technically demanding project yet.</p>
-          </div>
-        </div>
-
         <div class="timeline__item timeline__item--current" data-reveal>
           <div class="timeline__dot timeline__dot--current"></div>
           <div class="glass-card timeline__card timeline__card--current">
-            <span class="timeline__tag timeline__tag--live">Now</span>
-            <h3>Preparing for AI/ML Internship</h3>
-            <p>Sharpening my portfolio, deepening ML fundamentals, and actively looking for an internship where I can work on real-world problems.</p>
+            <span class="timeline__tag timeline__tag--live">Current focus</span>
+            <h3>C++ / DSA + ScamShield</h3>
+            <p>Strengthening C++ OOP and data structures while developing the next phase of ScamShield. The planned direction includes QR and screenshot analysis, explainable risk evidence, and a clear, testable threat-analysis core.</p>
+            <div class="timeline__links">
+              <a class="timeline__link" href="https://github.com/Shivanshbajaj1/ScamShield-PBL" target="_blank" rel="noopener">ScamShield repository ↗</a>
+              <a class="timeline__link" href="https://github.com/Shivanshbajaj1/leetcode-solutions" target="_blank" rel="noopener">Problem-solving log ↗</a>
+            </div>
           </div>
         </div>
       </div>
@@ -326,157 +312,174 @@
   <!-- ============ PROJECTS ============ -->
   <section class="projects" id="projects">
     <div class="section-inner">
-      <p class="section-eyebrow" data-reveal>04 — Featured Work</p>
-      <h2 class="section-heading" data-reveal>Projects, not just repositories.</h2>
-
+      <p class="section-eyebrow" data-reveal>04 — Selected Work</p>
+      <h2 class="section-heading" data-reveal>Real projects. Clear purpose. Room to improve.</h2>
+      <p class="section-intro" data-reveal>Explore the repository, read how it works, and try the live demo where one is available.</p>
       <div class="projects__grid">
-
         <article class="project-card project-card--featured glass-card" data-reveal>
           <div class="project-card__media">
-            <div class="project-card__visual project-card__visual--gesture">
-              <svg viewBox="0 0 400 240" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
-                <defs>
-                  <linearGradient id="pcGrad1" x1="0" y1="0" x2="1" y2="1">
-                    <stop offset="0%" stop-color="#8B5CF6" stop-opacity="0.5"/>
-                    <stop offset="100%" stop-color="#3B82F6" stop-opacity="0.3"/>
-                  </linearGradient>
-                </defs>
-                <rect width="400" height="240" fill="#0b1120"/>
-                <g opacity="0.9">
-                  <circle cx="200" cy="120" r="55" fill="none" stroke="url(#pcGrad1)" stroke-width="2"/>
-                  <circle cx="200" cy="120" r="90" fill="none" stroke="url(#pcGrad1)" stroke-width="1" stroke-dasharray="4 6"/>
-                  <path d="M170 150 Q175 95 195 90 Q198 70 210 72 Q214 55 226 60 Q232 48 242 58 Q248 70 240 100 L235 150 Z" fill="url(#pcGrad1)" stroke="#8B5CF6" stroke-width="1.5"/>
+            <div class="project-card__visual project-card__visual--scamshield">
+              <svg viewBox="0 0 400 240" role="img" aria-label="Shield and evidence network illustration">
+                <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="200" cy="116" r="78" stroke="#8B5CF6" stroke-opacity=".25" stroke-dasharray="3 9"/>
+                  <circle cx="200" cy="116" r="55" stroke="#22D3EE" stroke-opacity=".28"/>
+                  <path d="M200 58 244 75v40c0 31-18 51-44 65-26-14-44-34-44-65V75z" stroke="#A78BFA" stroke-width="4" fill="#8B5CF6" fill-opacity=".12"/>
+                  <path d="m180 116 14 14 28-31" stroke="#22D3EE" stroke-width="5"/>
+                  <path d="M105 65h36M259 157h38M123 176h27" stroke="#22D3EE" stroke-width="2" stroke-opacity=".8"/>
+                  <circle cx="105" cy="65" r="5" fill="#22D3EE"/><circle cx="297" cy="157" r="5" fill="#F472B6"/><circle cx="123" cy="176" r="4" fill="#A78BFA"/>
                 </g>
               </svg>
+              <span class="project-visual-label">THREAT ANALYSIS · C++ / DSA</span>
             </div>
-            <span class="project-card__badge">Flagship</span>
+            <span class="project-card__badge">Flagship · In Progress</span>
           </div>
           <div class="project-card__body">
-            <h3>AI Gesture Control for Google Slides</h3>
-            <p>Control presentation slides in real time using nothing but hand gestures — built with a custom stabilization layer to eliminate flicker and single-frame misfires.</p>
-            <div class="project-card__tech">
-              <span>Python</span><span>OpenCV</span><span>MediaPipe</span>
-            </div>
+            <h3>ScamShield</h3>
+            <p>An explainable scam and phishing analysis project. The Phase III direction expands from message/URL checks toward QR codes and screenshots, with evidence-based risk explanations and a C++ OOP/DSA core.</p>
+            <div class="project-card__tech"><span>C++</span><span>OOP</span><span>DSA</span><span>Python integration</span><span>Cybersecurity</span></div>
             <div class="project-card__links">
-              <a href="https://github.com/Shivanshbajaj1/AI-Gesture-Control-Slides" target="_blank" rel="noopener" class="project-card__link">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.79-.25.79-.55 0-.27-.01-1.17-.02-2.12-3.2.7-3.87-1.36-3.87-1.36-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.78 1.19 1.78 1.19 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.68 0-1.25.45-2.28 1.19-3.08-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.21-1.49 3.18-1.18 3.18-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.08 0 4.41-2.69 5.38-5.25 5.67.41.35.78 1.05.78 2.11 0 1.53-.01 2.76-.01 3.13 0 .3.21.66.79.55A10.52 10.52 0 0 0 23.5 12c0-6.35-5.15-11.5-11.5-11.5Z"/></svg>
-                Code
-              </a>
+              <a href="https://github.com/Shivanshbajaj1/ScamShield-PBL" target="_blank" rel="noopener" class="project-card__link">Source code ↗</a>
             </div>
           </div>
         </article>
 
-        <article class="project-card glass-card" data-reveal data-reveal-delay="60">
+        <article class="project-card glass-card" data-reveal data-reveal-delay="50">
           <div class="project-card__media">
-            <div class="project-card__visual project-card__visual--pbl">
-              <svg viewBox="0 0 400 240" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
-                <rect width="400" height="240" fill="#0b1120"/>
-                <polyline points="40,190 100,140 160,165 220,90 280,110 360,50" fill="none" stroke="#3B82F6" stroke-width="2.5" opacity="0.85"/>
-                <g fill="#8B5CF6" opacity="0.9">
-                  <circle cx="40" cy="190" r="4"/><circle cx="100" cy="140" r="4"/><circle cx="160" cy="165" r="4"/><circle cx="220" cy="90" r="4"/><circle cx="280" cy="110" r="4"/><circle cx="360" cy="50" r="4"/>
+            <div class="project-card__visual project-card__visual--ml">
+              <svg viewBox="0 0 400 240" role="img" aria-label="Model comparison chart illustration">
+                <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M54 38v160h300" stroke="#64748B" stroke-width="2"/>
+                  <path d="M54 158h300M54 118h300M54 78h300" stroke="#94A3B8" stroke-opacity=".16" stroke-dasharray="4 6"/>
+                  <rect x="89" y="124" width="36" height="74" rx="6" fill="#8B5CF6" fill-opacity=".75"/>
+                  <rect x="151" y="92" width="36" height="106" rx="6" fill="#22D3EE" fill-opacity=".75"/>
+                  <rect x="213" y="67" width="36" height="131" rx="6" fill="#F472B6" fill-opacity=".75"/>
+                  <rect x="275" y="47" width="36" height="151" rx="6" fill="#A78BFA" fill-opacity=".85"/>
                 </g>
               </svg>
+              <span class="project-visual-label">COMPARE · EVALUATE · PREDICT</span>
+            </div>
+            <span class="project-card__badge">Live demo</span>
+          </div>
+          <div class="project-card__body">
+            <h3>ML Playground</h3>
+            <p>Upload CSV data, compare classification and regression models, review evaluation metrics and export predictions.</p>
+            <div class="project-card__tech"><span>Python</span><span>Streamlit</span><span>Scikit-learn</span></div>
+            <div class="project-card__links">
+              <a href="https://ml-playground-g3ys9nbggvlkbvpfefmkq5.streamlit.app/" target="_blank" rel="noopener" class="project-card__link">Try demo ↗</a>
+              <a href="https://github.com/Shivanshbajaj1/ML-Playground" target="_blank" rel="noopener" class="project-card__link">Code ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card glass-card" data-reveal data-reveal-delay="100">
+          <div class="project-card__media">
+            <div class="project-card__visual project-card__visual--cifake">
+              <svg viewBox="0 0 400 240" role="img" aria-label="Image classification frame illustration">
+                <g fill="none" stroke-linejoin="round">
+                  <rect x="96" y="40" width="208" height="160" rx="16" stroke="#22D3EE" stroke-opacity=".65" stroke-width="3"/>
+                  <rect x="112" y="56" width="176" height="128" rx="10" fill="#22D3EE" fill-opacity=".08" stroke="#A78BFA" stroke-opacity=".4"/>
+                  <circle cx="160" cy="99" r="17" fill="#F472B6" fill-opacity=".75"/>
+                  <path d="m118 170 50-45 28 24 30-37 48 58" stroke="#22D3EE" stroke-width="4"/>
+                  <path d="M138 31v18M262 31v18M86 70h18M296 70h18M86 170h18M296 170h18" stroke="#A78BFA" stroke-width="3"/>
+                </g>
+              </svg>
+              <span class="project-visual-label">IMAGE CLASSIFICATION + GRAD-CAM</span>
+            </div>
+            <span class="project-card__badge">Computer Vision</span>
+          </div>
+          <div class="project-card__body">
+            <h3>CIFAKE Image Detector</h3>
+            <p>A CNN-based REAL / AI-GENERATED classifier with Grad-CAM visual explanations and a warning for low-confidence predictions.</p>
+            <div class="project-card__tech"><span>Python</span><span>CNN</span><span>Grad-CAM</span><span>Streamlit</span></div>
+            <div class="project-card__links"><a href="https://github.com/Shivanshbajaj1/CIFAKE" target="_blank" rel="noopener" class="project-card__link">Explore project ↗</a></div>
+          </div>
+        </article>
+
+        <article class="project-card glass-card" data-reveal data-reveal-delay="40">
+          <div class="project-card__media">
+            <div class="project-card__visual project-card__visual--gesture">
+              <svg viewBox="0 0 400 240" role="img" aria-label="Hand tracking illustration">
+                <g fill="none" stroke="#22D3EE" stroke-linecap="round" stroke-linejoin="round" stroke-width="4">
+                  <path d="M157 174v-62c0-13 19-13 19 0v27-65c0-14 20-14 20 0v59-73c0-14 20-14 20 0v74-56c0-14 20-14 20 0v65l9-17c7-13 25-4 19 9l-19 42c-8 18-20 27-41 27h-7c-23 0-40-11-48-30l-13-28c-6-13 13-23 21-10l12 19Z"/>
+                  <circle cx="210" cy="116" r="80" stroke="#A78BFA" stroke-opacity=".25" stroke-dasharray="4 9"/>
+                </g>
+              </svg>
+              <span class="project-visual-label">REAL-TIME GESTURES</span>
+            </div>
+            <span class="project-card__badge">Automation</span>
+          </div>
+          <div class="project-card__body">
+            <h3>AI Gesture Control for Slides</h3>
+            <p>Uses webcam hand tracking to control presentation actions, with a small stabilizer to reduce accidental triggers.</p>
+            <div class="project-card__tech"><span>Python</span><span>OpenCV</span><span>MediaPipe</span><span>Testing</span></div>
+            <div class="project-card__links"><a href="https://github.com/Shivanshbajaj1/AI-Gesture-Control-Slides" target="_blank" rel="noopener" class="project-card__link">Explore project ↗</a></div>
+          </div>
+        </article>
+
+        <article class="project-card glass-card" data-reveal data-reveal-delay="80">
+          <div class="project-card__media">
+            <div class="project-card__visual project-card__visual--organizer">
+              <svg viewBox="0 0 400 240" role="img" aria-label="Organized folders illustration">
+                <g stroke-linejoin="round" stroke-width="3">
+                  <path d="M72 83h95l18 19h143v91H72z" fill="#8B5CF6" fill-opacity=".24" stroke="#A78BFA"/>
+                  <path d="M91 65h85l18 18h125v20H91z" fill="#22D3EE" fill-opacity=".23" stroke="#22D3EE"/>
+                  <rect x="119" y="116" width="42" height="42" rx="8" fill="#F472B6" fill-opacity=".65" stroke="#F472B6"/>
+                  <rect x="179" y="116" width="42" height="42" rx="8" fill="#22D3EE" fill-opacity=".65" stroke="#22D3EE"/>
+                  <rect x="239" y="116" width="42" height="42" rx="8" fill="#A78BFA" fill-opacity=".65" stroke="#A78BFA"/>
+                </g>
+              </svg>
+              <span class="project-visual-label">SORT · LOG · UNDO</span>
             </div>
           </div>
           <div class="project-card__body">
-            <h3>Python PBL</h3>
-            <p>End-to-end machine learning pipeline covering preprocessing, exploratory analysis, PCA, and classification on real datasets.</p>
-            <div class="project-card__tech">
-              <span>Python</span><span>scikit-learn</span><span>Pandas</span>
-            </div>
-            <div class="project-card__links">
-              <a href="https://github.com/Shivanshbajaj1/Python_PBL" target="_blank" rel="noopener" class="project-card__link">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.79-.25.79-.55 0-.27-.01-1.17-.02-2.12-3.2.7-3.87-1.36-3.87-1.36-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.78 1.19 1.78 1.19 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.68 0-1.25.45-2.28 1.19-3.08-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.21-1.49 3.18-1.18 3.18-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.08 0 4.41-2.69 5.38-5.25 5.67.41.35.78 1.05.78 2.11 0 1.53-.01 2.76-.01 3.13 0 .3.21.66.79.55A10.52 10.52 0 0 0 23.5 12c0-6.35-5.15-11.5-11.5-11.5Z"/></svg>
-                Code
-              </a>
-            </div>
+            <h3>Smart File Organizer</h3>
+            <p>Sorts files into extension-based folders, handles duplicate names, logs moves and supports undo.</p>
+            <div class="project-card__tech"><span>Python</span><span>File I/O</span><span>Automation</span></div>
+            <div class="project-card__links"><a href="https://github.com/Shivanshbajaj1/Smart-File-Organizer" target="_blank" rel="noopener" class="project-card__link">Explore project ↗</a></div>
           </div>
         </article>
 
         <article class="project-card glass-card" data-reveal data-reveal-delay="120">
           <div class="project-card__media">
-            <div class="project-card__visual project-card__visual--portfolio">
-              <svg viewBox="0 0 400 240" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
-                <rect width="400" height="240" fill="#0b1120"/>
-                <rect x="40" y="40" width="320" height="160" rx="10" fill="none" stroke="#EC4899" stroke-width="1.5" opacity="0.6"/>
-                <rect x="60" y="60" width="120" height="14" rx="4" fill="#8B5CF6" opacity="0.7"/>
-                <rect x="60" y="90" width="280" height="8" rx="4" fill="#3B82F6" opacity="0.4"/>
-                <rect x="60" y="108" width="200" height="8" rx="4" fill="#3B82F6" opacity="0.4"/>
-                <rect x="60" y="140" width="80" height="40" rx="8" fill="#8B5CF6" opacity="0.35"/>
-                <rect x="152" y="140" width="80" height="40" rx="8" fill="#3B82F6" opacity="0.35"/>
-                <rect x="244" y="140" width="80" height="40" rx="8" fill="#EC4899" opacity="0.35"/>
+            <div class="project-card__visual project-card__visual--foodloop">
+              <svg viewBox="0 0 400 240" role="img" aria-label="Food demand and sustainability illustration">
+                <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="200" cy="120" r="67" stroke="#34D399" stroke-width="4"/>
+                  <circle cx="200" cy="120" r="48" stroke="#22D3EE" stroke-opacity=".65" stroke-width="3"/>
+                  <path d="M199 155c-33-15-39-47-8-65 16 16 19 30 8 42 16-5 31-23 27-47 30 25 13 61-27 70Z" fill="#34D399" fill-opacity=".75" stroke="#34D399" stroke-width="3"/>
+                </g>
               </svg>
+              <span class="project-visual-label">PREDICT DEMAND · REDUCE WASTE</span>
             </div>
+            <span class="project-card__badge">Applied ML</span>
           </div>
           <div class="project-card__body">
-            <h3>Portfolio Website</h3>
-            <p>This site — a hand-built, dependency-free portfolio with custom animation, glassmorphism, and a particle background.</p>
-            <div class="project-card__tech">
-              <span>HTML5</span><span>CSS3</span><span>JavaScript</span>
-            </div>
-            <div class="project-card__links">
-              <a href="https://github.com/Shivanshbajaj1" target="_blank" rel="noopener" class="project-card__link">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.79-.25.79-.55 0-.27-.01-1.17-.02-2.12-3.2.7-3.87-1.36-3.87-1.36-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.78 1.19 1.78 1.19 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.68 0-1.25.45-2.28 1.19-3.08-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.21-1.49 3.18-1.18 3.18-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.08 0 4.41-2.69 5.38-5.25 5.67.41.35.78 1.05.78 2.11 0 1.53-.01 2.76-.01 3.13 0 .3.21.66.79.55A10.52 10.52 0 0 0 23.5 12c0-6.35-5.15-11.5-11.5-11.5Z"/></svg>
-                Code
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <article class="project-card glass-card" data-reveal>
-          <div class="project-card__media">
-            <div class="project-card__visual project-card__visual--chatbot">
-              <svg viewBox="0 0 400 240" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
-                <rect width="400" height="240" fill="#0b1120"/>
-                <rect x="70" y="60" width="180" height="44" rx="16" fill="#111827" stroke="#3B82F6" stroke-width="1.5"/>
-                <rect x="150" y="120" width="180" height="44" rx="16" fill="#8B5CF6" opacity="0.35"/>
-                <rect x="70" y="170" width="140" height="30" rx="14" fill="#111827" stroke="#3B82F6" stroke-width="1.5"/>
-              </svg>
-            </div>
-          </div>
-          <div class="project-card__body">
-            <h3>CodeAlpha Basic Chatbot</h3>
-            <p>A rule-based conversational chatbot built in Python, focused on clean intent-matching logic.</p>
-            <div class="project-card__tech">
-              <span>Python</span><span>NLP</span>
-            </div>
-            <div class="project-card__links">
-              <a href="https://github.com/Shivanshbajaj1" target="_blank" rel="noopener" class="project-card__link">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.79-.25.79-.55 0-.27-.01-1.17-.02-2.12-3.2.7-3.87-1.36-3.87-1.36-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.78 1.19 1.78 1.19 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.68 0-1.25.45-2.28 1.19-3.08-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.21-1.49 3.18-1.18 3.18-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.08 0 4.41-2.69 5.38-5.25 5.67.41.35.78 1.05.78 2.11 0 1.53-.01 2.76-.01 3.13 0 .3.21.66.79.55A10.52 10.52 0 0 0 23.5 12c0-6.35-5.15-11.5-11.5-11.5Z"/></svg>
-                Code
-              </a>
-            </div>
+            <h3>FoodLoop AI</h3>
+            <p>A project exploring meal-demand prediction for cafeterias and hostels to help reduce avoidable food overproduction.</p>
+            <div class="project-card__tech"><span>Python</span><span>ML</span><span>Data Analysis</span></div>
+            <div class="project-card__links"><a href="https://github.com/Shivanshbajaj1/FoodLoop-AI" target="_blank" rel="noopener" class="project-card__link">Explore project ↗</a></div>
           </div>
         </article>
 
         <article class="project-card glass-card" data-reveal data-reveal-delay="60">
           <div class="project-card__media">
-            <div class="project-card__visual project-card__visual--extractor">
-              <svg viewBox="0 0 400 240" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
-                <rect width="400" height="240" fill="#0b1120"/>
-                <rect x="60" y="50" width="280" height="16" rx="4" fill="#3B82F6" opacity="0.3"/>
-                <rect x="60" y="80" width="220" height="10" rx="4" fill="#3B82F6" opacity="0.25"/>
-                <rect x="60" y="100" width="200" rx="4" height="10" fill="#3B82F6" opacity="0.25"/>
-                <rect x="60" y="128" width="150" height="18" rx="5" fill="#EC4899" opacity="0.5"/>
-                <rect x="60" y="160" width="180" height="10" rx="4" fill="#3B82F6" opacity="0.25"/>
+            <div class="project-card__visual project-card__visual--leetcode">
+              <svg viewBox="0 0 400 240" role="img" aria-label="Code brackets and algorithm nodes illustration">
+                <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="m146 81-44 39 44 39M254 81l44 39-44 39M227 66l-54 108" stroke="#A78BFA" stroke-width="8"/>
+                  <circle cx="200" cy="120" r="86" stroke="#22D3EE" stroke-opacity=".22" stroke-dasharray="4 9"/>
+                </g>
               </svg>
+              <span class="project-visual-label">PROBLEM SOLVING · ONE STEP AT A TIME</span>
             </div>
           </div>
           <div class="project-card__body">
-            <h3>CodeAlpha Email Extractor</h3>
-            <p>A regex-driven utility that scans raw text and reliably pulls out valid email addresses.</p>
-            <div class="project-card__tech">
-              <span>Python</span><span>Regex</span>
-            </div>
-            <div class="project-card__links">
-              <a href="https://github.com/Shivanshbajaj1" target="_blank" rel="noopener" class="project-card__link">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.79-.25.79-.55 0-.27-.01-1.17-.02-2.12-3.2.7-3.87-1.36-3.87-1.36-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.78 1.19 1.78 1.19 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.68 0-1.25.45-2.28 1.19-3.08-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.21-1.49 3.18-1.18 3.18-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.08 0 4.41-2.69 5.38-5.25 5.67.41.35.78 1.05.78 2.11 0 1.53-.01 2.76-.01 3.13 0 .3.21.66.79.55A10.52 10.52 0 0 0 23.5 12c0-6.35-5.15-11.5-11.5-11.5Z"/></svg>
-                Code
-              </a>
-            </div>
+            <h3>LeetCode Solutions</h3>
+            <p>Topic-organized coding practice as I strengthen algorithmic thinking and software engineering interview fundamentals.</p>
+            <div class="project-card__tech"><span>Algorithms</span><span>Arrays</span><span>Hashing</span><span>Two Pointers</span></div>
+            <div class="project-card__links"><a href="https://github.com/Shivanshbajaj1/leetcode-solutions" target="_blank" rel="noopener" class="project-card__link">View solutions ↗</a></div>
           </div>
         </article>
-
       </div>
     </div>
   </section>
@@ -484,43 +487,58 @@
   <!-- ============ ACHIEVEMENTS ============ -->
   <section class="achievements" id="achievements">
     <div class="section-inner">
+      <p class="section-eyebrow" data-reveal>05 — Progress Snapshot</p>
+      <h2 class="section-heading" data-reveal>Evidence over empty numbers.</h2>
       <div class="achievements__grid">
-        <div class="achievement" data-reveal>
-          <span class="achievement__num" data-count="5">0</span>
-          <span class="achievement__label">Projects Built</span>
+        <div class="achievement glass-card" data-reveal>
+          <span class="achievement__num" data-count="22">0</span>
+          <span class="achievement__label">Public repositories</span>
         </div>
-        <div class="achievement" data-reveal data-reveal-delay="60">
+        <div class="achievement glass-card" data-reveal data-reveal-delay="60">
           <span class="achievement__num" data-count="7">0</span>
-          <span class="achievement__label">GitHub Repositories</span>
+          <span class="achievement__label">Featured projects</span>
         </div>
-        <div class="achievement" data-reveal data-reveal-delay="120">
+        <div class="achievement glass-card" data-reveal data-reveal-delay="120">
           <span class="achievement__num" data-count="2">0</span>
-          <span class="achievement__label">Certifications</span>
+          <span class="achievement__label">Internship project tracks</span>
         </div>
-        <div class="achievement" data-reveal data-reveal-delay="180">
-          <span class="achievement__num" data-count="2">0</span>
-          <span class="achievement__label">Years into B.Tech</span>
+        <div class="achievement glass-card" data-reveal data-reveal-delay="180">
+          <span class="achievement__num" data-count="1">0</span>
+          <span class="achievement__label">Live ML demo</span>
         </div>
       </div>
+      <p class="metrics-note">Repository and project counts reflect this portfolio refresh; they will change as new work is published. Certifications are intentionally not listed without verified credentials.</p>
     </div>
   </section>
 
   <!-- ============ GITHUB ============ -->
   <section class="github" id="github">
     <div class="section-inner">
-      <p class="section-eyebrow" data-reveal>05 — GitHub</p>
-      <h2 class="section-heading" data-reveal>The commit history tells the real story.</h2>
-
-      <div class="github__grid" data-reveal data-reveal-delay="80">
-        <div class="glass-card github__card github__card--stats">
-          <img src="https://github-readme-stats.vercel.app/api?username=Shivanshbajaj1&show_icons=true&theme=transparent&title_color=8B5CF6&icon_color=3B82F6&text_color=94A3B8&bg_color=00000000&border_color=232946&hide_border=true" alt="Shivansh Bajaj's GitHub stats" loading="lazy">
+      <p class="section-eyebrow" data-reveal>06 — Open Workbench</p>
+      <h2 class="section-heading" data-reveal>My GitHub is the proof of work.</h2>
+      <p class="section-intro" data-reveal>Explore the source, follow current builds, or browse the contribution graph below. The links go straight to my GitHub profile and repositories.</p>
+      <div class="github__action-grid" data-reveal data-reveal-delay="60">
+        <a class="github-action-card github-action-card--violet" href="https://github.com/Shivanshbajaj1?tab=repositories" target="_blank" rel="noopener">
+          <span class="github-action-card__icon">⌘</span><span class="github-action-card__title">Browse repositories</span><span class="github-action-card__desc">22 public repos · projects and learning</span><span class="github-action-card__go">Open GitHub ↗</span>
+        </a>
+        <a class="github-action-card github-action-card--cyan" href="https://github.com/Shivanshbajaj1/ScamShield-PBL" target="_blank" rel="noopener">
+          <span class="github-action-card__icon">⬡</span><span class="github-action-card__title">Current flagship</span><span class="github-action-card__desc">ScamShield · C++ / OOP / DSA focus</span><span class="github-action-card__go">View project ↗</span>
+        </a>
+        <a class="github-action-card github-action-card--pink" href="https://www.linkedin.com/in/shivansh-bajaj-a433b7371/" target="_blank" rel="noopener">
+          <span class="github-action-card__icon">↗</span><span class="github-action-card__title">Connect professionally</span><span class="github-action-card__desc">Open to internship opportunities and collaboration</span><span class="github-action-card__go">LinkedIn ↗</span>
+        </a>
+      </div>
+      <div class="github__snake-panel glass-card" data-reveal>
+        <div class="github__snake-heading">
+          <div><span class="section-eyebrow">COMMIT ACTIVITY</span><h3>Little squares. Consistent progress. 🐍</h3></div>
+          <a class="timeline__link" href="https://github.com/Shivanshbajaj1" target="_blank" rel="noopener">View contribution graph ↗</a>
         </div>
-        <div class="glass-card github__card github__card--langs">
-          <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Shivanshbajaj1&layout=compact&theme=transparent&title_color=8B5CF6&text_color=94A3B8&bg_color=00000000&border_color=232946&hide_border=true" alt="Shivansh Bajaj's most-used languages" loading="lazy">
-        </div>
-        <div class="glass-card github__card github__card--streak">
-          <img src="https://github-readme-streak-stats.herokuapp.com/?user=Shivanshbajaj1&theme=transparent&background=00000000&stroke=232946&ring=8B5CF6&fire=EC4899&currStreakLabel=F8FAFC&sideLabels=94A3B8&dates=64748B&border=232946" alt="Shivansh Bajaj's GitHub streak" loading="lazy">
-        </div>
+        <picture>
+          <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Shivanshbajaj1/Shivanshbajaj1/output/github-contribution-grid-snake-dark.svg">
+          <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Shivanshbajaj1/Shivanshbajaj1/output/github-contribution-grid-snake.svg">
+          <img class="github__snake-img" src="https://raw.githubusercontent.com/Shivanshbajaj1/Shivanshbajaj1/output/github-contribution-grid-snake.svg" alt="Animated snake moving through my GitHub contribution graph" loading="lazy">
+        </picture>
+        <p class="github__snake-note">This animation is generated from my actual GitHub contributions by GitHub Actions.</p>
       </div>
     </div>
   </section>
@@ -530,7 +548,7 @@
     <div class="section-inner">
       <p class="section-eyebrow" data-reveal>06 — Contact</p>
       <h2 class="section-heading section-heading--center" data-reveal>Let's build something amazing together.</h2>
-      <p class="contact__sub" data-reveal>Open to AI/ML internships, software engineering roles, and interesting open-source problems.</p>
+      <p class="contact__sub" data-reveal>Open to software engineering and AI/ML internship opportunities, team projects, and meaningful technical challenges.</p>
 
       <div class="contact__grid" data-reveal data-reveal-delay="80">
         <a href="https://github.com/Shivanshbajaj1" target="_blank" rel="noopener" class="glass-card contact__card">
@@ -580,7 +598,7 @@
 <!-- ============ FOOTER ============ -->
 <footer class="footer">
   <div class="section-inner footer__inner">
-    <p>Designed &amp; developed by <span>Shivansh Bajaj</span></p>
+    <p>Designed &amp; built by <span>Shivansh Bajaj</span> · HTML, CSS &amp; JavaScript</p>
     <p class="footer__year">© 2026</p>
   </div>
 </footer>
