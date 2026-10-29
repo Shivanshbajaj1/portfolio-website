@@ -221,3 +221,53 @@ section .section-heading--center::after { margin-left: auto; margin-right: auto;
   .skills__marquee { mask-image: none; }
   .github-action-card, .project-card, .glass-card { transition: none !important; }
 }
+
+
+/* LinkedIn-backed experience and credentials */
+.credential-card__topline { display:flex; align-items:center; justify-content:space-between; gap:.8rem; margin-bottom:1rem; }
+.credential-icon {
+  width:42px; height:42px; display:grid; place-items:center; flex:0 0 42px;
+  border:1px solid currentColor; border-radius:13px; font:700 1.1rem var(--font-mono);
+  background:rgba(255,255,255,.025); box-shadow:0 0 25px rgba(139,92,246,.08);
+}
+.credential-provider {
+  display:inline-flex; align-items:center; border:1px solid currentColor; border-radius:999px;
+  padding:5px 9px; font:700 9px var(--font-mono); letter-spacing:.06em; text-transform:uppercase;
+  white-space:nowrap; background:rgba(255,255,255,.025);
+}
+.credential-icon--purple,.credential-provider--purple { color:#C4B5FD; border-color:rgba(196,181,253,.38); }
+.credential-icon--blue,.credential-provider--blue { color:#93C5FD; border-color:rgba(147,197,253,.34); }
+.credential-icon--cyan,.credential-provider--cyan { color:#67E8F9; border-color:rgba(103,232,249,.35); }
+.credential-icon--orange,.credential-provider--orange { color:#FDBA74; border-color:rgba(253,186,116,.34); }
+.credential-icon--pink,.credential-provider--pink { color:#F9A8D4; border-color:rgba(249,168,212,.34); }
+.credential-icon--green,.credential-provider--green { color:#86EFAC; border-color:rgba(134,239,172,.34); }
+.credential-icon--muted,.credential-provider--muted { color:#A1A1AA; border-color:rgba(161,161,170,.3); }
+.credential-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1rem; margin-top:2.2rem; }
+.credential-card {
+  min-width:0; min-height:220px; padding:1.25rem; display:flex; flex-direction:column;
+  position:relative; overflow:hidden; transition:transform .23s ease,border-color .23s ease,box-shadow .23s ease;
+}
+.credential-card::after {
+  content:""; position:absolute; inset:auto 0 0; height:2px; background:var(--gradient-accent);
+  opacity:.48; transform:scaleX(.28); transform-origin:left; transition:transform .25s ease,opacity .25s ease;
+}
+.credential-card:hover { transform:translateY(-5px); border-color:rgba(34,211,238,.48); box-shadow:0 16px 40px rgba(0,0,0,.3),0 0 24px rgba(34,211,238,.06); }
+.credential-card:hover::after { transform:scaleX(1); opacity:1; }
+.credential-card h3 { font:600 1.04rem/1.42 var(--font-display); color:var(--text); margin:.15rem 0 .55rem; }
+.credential-card p { font-size:.81rem; line-height:1.65; color:var(--text-dim); overflow-wrap:anywhere; }
+.credential-card p code { font-size:.72rem; color:#A5F3FC; overflow-wrap:anywhere; }
+.credential-card__footer {
+  display:flex; flex-wrap:wrap; justify-content:space-between; gap:.45rem; align-items:center;
+  margin-top:auto; padding-top:1.2rem; color:var(--text-faint); font:500 10px var(--font-mono);
+}
+.credential-status { color:#A5F3FC; border-radius:999px; background:rgba(34,211,238,.07); padding:5px 8px; border:1px solid rgba(34,211,238,.16); }
+.credential-status--expired { color:#FCA5A5; background:rgba(248,113,113,.07); border-color:rgba(248,113,113,.25); }
+.credential-card--historical { border-color:rgba(161,161,170,.14); background:linear-gradient(145deg,rgba(35,37,49,.56),rgba(12,14,25,.8)); }
+.credential-actions { display:flex; flex-direction:column; align-items:center; gap:.8rem; margin-top:2rem; text-align:center; }
+.credential-actions p { color:var(--text-faint); font-size:.78rem; line-height:1.65; max-width:650px; }
+.credential-card .project-card__tech { margin-top:.8rem; }
+@media (max-width:1024px) { .credential-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media (max-width:768px) {
+  .credential-grid { grid-template-columns:1fr; }
+  .credential-card { min-height:0; }
+}
