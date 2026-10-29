@@ -1,202 +1,65 @@
-<div align="center">
+ <div align="center">
 
-# 🚀 AI/ML Portfolio Website
+# ✦ Shivansh Bajaj — Developer Portfolio
 
-### A modern, responsive portfolio showcasing my journey in Artificial Intelligence, Machine Learning, Computer Vision, and Cloud Computing.
+**C++ & DSA · AI/ML · Computer Vision · Practical Software Projects**
 
-<p>
-  <a href="https://shivanshbajaj1.github.io/portfolio-website/">
-    <img src="https://img.shields.io/badge/🌐_Live_Demo-Visit_Portfolio-8B5CF6?style=for-the-badge">
-  </a>
-  <a href="LICENSE">
-    <img src="https://img.shields.io/github/license/Shivanshbajaj1/portfolio-website?style=for-the-badge">
-  </a>
-  <img src="https://img.shields.io/github/last-commit/Shivanshbajaj1/portfolio-website?style=for-the-badge">
-  <img src="https://img.shields.io/github/repo-size/Shivanshbajaj1/portfolio-website?style=for-the-badge">
-</p>
-
-**Live Website**
-
-👉 **https://shivanshbajaj1.github.io/portfolio-website/**
+<a href="https://shivanshbajaj1.github.io/portfolio-website/"><img src="https://img.shields.io/badge/Live_Portfolio-Open-7C3AED?style=for-the-badge&logo=githubpages&logoColor=white" alt="Open live portfolio"/></a>
+<a href="https://github.com/Shivanshbajaj1"><img src="https://img.shields.io/badge/GitHub-Profile-181717?style=for-the-badge&logo=github" alt="GitHub profile"/></a>
+<a href="https://www.linkedin.com/in/shivansh-bajaj-a433b7371/"><img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin" alt="LinkedIn"/></a>
 
 </div>
 
 ---
 
-# 📖 About
+## About
 
-This repository contains the source code for my personal portfolio website.
+A responsive personal portfolio for **Shivansh Bajaj**, a B.Tech CSE (AI & ML) student at Graphic Era Deemed to be University. The site highlights current work in C++/DSA, applied AI/ML, computer vision, internship project repositories and practical tools.
 
-The website showcases my:
+## Live features
 
-- 🤖 AI & Machine Learning projects
-- 👁️ Computer Vision applications
-- ☁️ AWS Cloud learning journey
-- 💻 Technical skills
-- 📂 Featured projects
-- 📄 Resume
-- 📫 Contact information
+- Animated, responsive hero and mobile navigation
+- Scroll progress, reveal animations, typewriter text and back-to-top control
+- Skills cards with learning-stage labels
+- Project cards with self-contained SVG artwork and direct repository/demo links
+- Experience timeline linking CodeAlpha and Cognifyz internship project work
+- Verified portfolio metrics: public repository count, showcased projects, internship project tracks and a live ML demo
+- Contribution snake SVG served from the profile repository's generated output branch
+- Downloadable resume PDF, social links, keyboard focus styles and reduced-motion support
 
-Designed with a modern glassmorphism-inspired UI, smooth animations, and fully responsive layouts.
+## Featured work
 
----
+- [ScamShield PBL](https://github.com/Shivanshbajaj1/ScamShield-PBL)
+- [ML Playground — Live Demo](https://ml-playground-g3ys9nbggvlkbvpfefmkq5.streamlit.app/)
+- [CIFAKE Image Detector](https://github.com/Shivanshbajaj1/CIFAKE)
+- [AI Gesture Control for Slides](https://github.com/Shivanshbajaj1/AI-Gesture-Control-Slides)
+- [Smart File Organizer](https://github.com/Shivanshbajaj1/Smart-File-Organizer)
+- [FoodLoop AI](https://github.com/Shivanshbajaj1/FoodLoop-AI)
+- [LeetCode Solutions](https://github.com/Shivanshbajaj1/leetcode-solutions)
 
-# ✨ Features
+## Internship project work
 
-- 🎨 Modern UI/UX
-- 📱 Fully Responsive Design
-- ⚡ Smooth Scroll Animations
-- 🌌 Animated Background Particles
-- 💡 Glassmorphism Components
-- ⌨️ Typewriter Hero Section
-- 📊 Interactive Timeline
-- 🧠 Skills Showcase
-- 🚀 Featured Projects
-- 📄 Resume Download
-- 🔗 Social Media Integration
-- ♿ Accessible Design
-- 🌙 Performance Optimized
+- [CodeAlpha Email Extractor](https://github.com/Shivanshbajaj1/CodeAlpha_EmailExtractor)
+- [CodeAlpha Basic Chatbot](https://github.com/Shivanshbajaj1/CodeAlpha_BasicChatbot)
+- [Cognifyz Python Internship Tasks](https://github.com/Shivanshbajaj1/Cognifyz-Python-Internship)
 
----
+The site presents these as repository-backed project work and does not invent dates, certificates, scores or employment metrics.
 
-# 🛠️ Built With
+## Built with
 
-### Frontend
+HTML5 · CSS3 · Vanilla JavaScript · SVG · GitHub Pages
 
-- HTML5
-- CSS3
-- JavaScript (ES6)
-
-### Design
-
-- Glassmorphism
-- CSS Variables
-- Flexbox
-- CSS Grid
-- Custom Animations
-
-### Deployment
-
-- GitHub Pages
-
----
-
-# 📂 Project Structure
-
-```text
-portfolio-website/
-│
-├── index.html
-│
-├── css/
-│   ├── reset.css
-│   ├── variables.css
-│   ├── main.css
-│   ├── animations.css
-│   └── responsive.css
-│
-├── js/
-│   ├── main.js
-│   └── particles.js
-│
-├── assets/
-│   ├── images
-│   └── resume
-│
-└── README.md
-```
-
----
-
-# 🚀 Getting Started
-
-Clone the repository
+## Run locally
 
 ```bash
 git clone https://github.com/Shivanshbajaj1/portfolio-website.git
-```
-
-Open the project
-
-```bash
 cd portfolio-website
 ```
 
-Run using VS Code Live Server
+Open `index.html` in a browser or use VS Code Live Server. No build step or package installation is required.
 
-or simply open
+## Contact
 
-```
-index.html
-```
-
-in your browser.
-
----
-
-# 🌐 Live Demo
-
-### 🔗 Portfolio Website
-
-**https://shivanshbajaj1.github.io/portfolio-website/**
-
----
-
-# 👨‍💻 About Me
-
-I'm **Shivansh Bajaj**, a second-year B.Tech Computer Science student specializing in Artificial Intelligence & Machine Learning.
-
-Currently exploring:
-
-- Artificial Intelligence
-- Machine Learning
-- Computer Vision
-- Python Development
-- AWS Cloud
-- Data Structures & Algorithms
-
-I enjoy building practical software that combines intelligent algorithms with real-world usability.
-
----
-
-# 📫 Connect With Me
-
-### LinkedIn
-
-https://linkedin.com/in/shivansh-bajaj-a433b7371
-
-### GitHub
-
-https://github.com/Shivanshbajaj1
-
-### Email
-
-shivanshbajaj276@gmail.com
-
----
-
-# ⭐ Support
-
-If you like this project,
-
-⭐ Star the repository
-
-🍴 Fork it
-
-🛠️ Contribute
-
----
-
-# 📄 License
-
-This project is licensed under the MIT License.
-
----
-
-<div align="center">
-
-### Thanks for visiting!
-
-Made with ❤️ by **Shivansh Bajaj**
-
-</div>
+- GitHub: [@Shivanshbajaj1](https://github.com/Shivanshbajaj1)
+- LinkedIn: [Profile](https://www.linkedin.com/in/shivansh-bajaj-a433b7371/)
+- Email: shivanshbajaj276@gmail.com
