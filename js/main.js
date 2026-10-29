@@ -11,18 +11,20 @@
 
   /* ---------- Skill data (rendered from JS to keep markup DRY) ---------- */
   const SKILLS = [
-    { name: 'Python', level: 'Proficient', icon: 'M9 3h6a3 3 0 0 1 3 3v3H9v1h9a3 3 0 0 1 3 3v3a3 3 0 0 1-3 3h-2v-3a3 3 0 0 0-3-3H9a3 3 0 0 1-3-3V6a3 3 0 0 1 3-3Zm.5 2a1 1 0 1 0 0 2 1 1 0 0 0 0-2Z M6 12v3a3 3 0 0 0 3 3h6a3 3 0 0 1 3 3v0a3 3 0 0 1-3 3H9a3 3 0 0 1-3-3v-3h6v-1H3a3 3 0 0 1-3-3v-3a3 3 0 0 1 3-3h2v3Zm8.5 7a1 1 0 1 0 0 2 1 1 0 0 0 0-2Z' },
-    { name: 'Machine Learning', level: 'Building', icon: 'M12 2a4 4 0 0 1 4 4c0 1-.4 1.9-1 2.6.6.7 1 1.6 1 2.6a4 4 0 0 1-1 2.6c.6.7 1 1.6 1 2.6a4 4 0 0 1-8 0c0-1 .4-1.9 1-2.6a3.98 3.98 0 0 1-1-2.6c0-1 .4-1.9 1-2.6A3.98 3.98 0 0 1 8 6a4 4 0 0 1 4-4Z M12 22v-4' },
-    { name: 'Computer Vision', level: 'Applied', icon: 'M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7Z M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z' },
-    { name: 'HTML', level: 'Proficient', icon: 'm3 2 1.6 18L12 22l7.4-2L21 2H3Zm14.3 5.7H8.2l.2 2.3h8.6l-.6 6.6-4.4 1.3-4.4-1.3-.3-3h2.1l.1 1.4 2.5.7 2.5-.7.2-2.7H7.6l-.6-6.9h9.7l-.1 2.3Z' },
-    { name: 'CSS', level: 'Proficient', icon: 'm3 2 1.6 18L12 22l7.4-2L21 2H3Zm14.3 5.7H8.2l.2 2.3h8.6l-.6 6.6-4.4 1.3-4.4-1.3-.3-3h2.1l.1 1.4 2.5.7 2.5-.7.2-2.7H7.6l-.6-6.9h9.7l-.1 2.3Z' },
-    { name: 'Git', level: 'Proficient', icon: 'M12 2 2 12l10 10 10-10L12 2Zm0 4.5a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm-3 3.5 1.5 1.5M15 10l-1.5 1.5M12 12.5V16a1.5 1.5 0 1 0 3 0' },
-    { name: 'GitHub', level: 'Proficient', icon: 'M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.79-.25.79-.55 0-.27-.01-1.17-.02-2.12-3.2.7-3.87-1.36-3.87-1.36-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.78 1.19 1.78 1.19 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.68 0-1.25.45-2.28 1.19-3.08-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.21-1.49 3.18-1.18 3.18-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.08 0 4.41-2.69 5.38-5.25 5.67.41.35.78 1.05.78 2.11 0 1.53-.01 2.76-.01 3.13 0 .3.21.66.79.55A10.52 10.52 0 0 0 23.5 12c0-6.35-5.15-11.5-11.5-11.5Z' },
-    { name: 'AWS', level: 'Learning', icon: 'M6 19a4 4 0 0 1-1-7.87A5 5 0 0 1 15 8a4.5 4.5 0 0 1 1 8.9M8 19h9' },
-    { name: 'SQL', level: 'Familiar', icon: 'M4 5c0-1.66 3.58-3 8-3s8 1.34 8 3-3.58 3-8 3-8-1.34-8-3Zm0 0v14c0 1.66 3.58 3 8 3s8-1.34 8-3V5 M4 12c0 1.66 3.58 3 8 3s8-1.34 8-3' },
-    { name: 'Data Structures', level: 'Learning', icon: 'M4 4h6v6H4V4Zm10 0h6v6h-6V4ZM4 14h6v6H4v-6Zm10 0h6v6h-6v-6Z' },
-    { name: 'Algorithms', level: 'Learning', icon: 'M3 12h4l3-9 4 18 3-9h4' },
-    { name: 'OpenCV / MediaPipe', level: 'Applied', icon: 'M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8 M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8Z' }
+    { name: 'C++', level: 'Actively building', icon: 'M12 2 21 7v10l-9 5-9-5V7l9-5Z M8 12h8 M12 8v8' },
+    { name: 'Python', level: 'Intermediate', icon: 'M9 3h6a3 3 0 0 1 3 3v3H9v1h9a3 3 0 0 1 3 3v3a3 3 0 0 1-3 3h-2v-3a3 3 0 0 0-3-3H9a3 3 0 0 1-3-3V6a3 3 0 0 1 3-3Zm.5 2a1 1 0 1 0 0 2 1 1 0 0 0 0-2Z M6 12v3a3 3 0 0 0 3 3h6a3 3 0 0 1 3 3v0a3 3 0 0 1-3 3H9a3 3 0 0 1-3-3v-3h6v-1H3a3 3 0 0 1-3-3v-3a3 3 0 0 1 3-3h2v3Z' },
+    { name: 'C', level: 'Coursework', icon: 'M12 2 21 7v10l-9 5-9-5V7l9-5Z M15 9a4 4 0 1 0 0 6' },
+    { name: 'Java', level: 'Familiar', icon: 'M7 9h10v6a5 5 0 0 1-10 0V9Z M17 11h2a2 2 0 0 1 0 4h-2 M8 3c4 1-1 3 3 5' },
+    { name: 'OOP & DSA', level: 'Current focus', icon: 'M4 4h6v6H4V4Zm10 0h6v6h-6V4ZM4 14h6v6H4v-6Zm10 0h6v6h-6v-6Z' },
+    { name: 'Algorithms', level: 'Actively learning', icon: 'M3 12h4l3-9 4 18 3-9h4' },
+    { name: 'Machine Learning', level: 'Project experience', icon: 'M12 2a4 4 0 0 1 4 4c0 1-.4 1.9-1 2.6.6.7 1 1.6 1 2.6a4 4 0 0 1-1 2.6c.6.7 1 1.6 1 2.6a4 4 0 0 1-8 0c0-1 .4-1.9 1-2.6a3.98 3.98 0 0 1-1-2.6c0-1 .4-1.9 1-2.6A3.98 3.98 0 0 1 8 6a4 4 0 0 1 4-4Z M12 22v-4' },
+    { name: 'Computer Vision', level: 'Applied in projects', icon: 'M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7Z M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z' },
+    { name: 'OpenCV / MediaPipe', level: 'Applied in projects', icon: 'M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8 M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8Z' },
+    { name: 'Scikit-learn', level: 'Project experience', icon: 'M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20ZM8 14l3-4 2 2 3-5' },
+    { name: 'Streamlit', level: 'Used in apps', icon: 'M4 19V5M4 19h16M8 15v-4M12 15V7M16 15V3' },
+    { name: 'HTML / CSS / JS', level: 'Built this portfolio', icon: 'm8 5-5 7 5 7 M16 5l5 7-5 7 M14 3l-4 18' },
+    { name: 'Git & GitHub', level: 'Regular workflow', icon: 'M12 2 2 12l10 10 10-10L12 2Zm0 4.5a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm-3 3.5 1.5 1.5M15 10l-1.5 1.5M12 12.5V16a1.5 1.5 0 1 0 3 0' },
+    { name: 'SQL', level: 'Familiar', icon: 'M4 5c0-1.66 3.58-3 8-3s8 1.34 8 3-3.58 3-8 3-8-1.34-8-3Zm0 0v14c0 1.66 3.58 3 8 3s8-1.34 8-3V5 M4 12c0 1.66 3.58 3 8 3s8-1.34 8-3' }
   ];
 
   function renderSkills() {
@@ -132,7 +134,7 @@
     const el = document.getElementById('typewriter');
     if (!el) return;
 
-    const words = ['AI/ML Engineer', 'Python Developer', 'Machine Learning Enthusiast', 'Computer Vision Learner', 'Cloud Computing Enthusiast'];
+    const words = ['C++ & DSA learner', 'AI/ML project builder', 'Computer Vision explorer', 'Python developer', 'Future software engineer'];
 
     if (prefersReducedMotion) {
       el.textContent = words[0];
