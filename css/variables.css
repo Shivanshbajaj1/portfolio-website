@@ -4,23 +4,23 @@
 
 :root {
   /* Color */
-  --bg:            #050816;
-  --bg-elevated:   #0a0f24;
-  --card:          #111827;
-  --card-border:   rgba(139, 92, 246, 0.14);
-  --primary:       #8B5CF6;
-  --primary-rgb:   139, 92, 246;
-  --secondary:     #3B82F6;
-  --secondary-rgb: 59, 130, 246;
-  --accent:        #EC4899;
-  --accent-rgb:    236, 72, 153;
+  --bg:            #070711;
+  --bg-elevated:   #0D1024;
+  --card:          #10152B;
+  --card-border:   rgba(167, 139, 250, 0.23);
+  --primary:       #A78BFA;
+  --primary-rgb:   167, 139, 250;
+  --secondary:     #22D3EE;
+  --secondary-rgb: 34, 211, 238;
+  --accent:        #F472B6;
+  --accent-rgb:    244, 114, 182;
   --text:          #F8FAFC;
-  --text-dim:      #94A3B8;
-  --text-faint:    #64748B;
+  --text-dim:      #B7C2D7;
+  --text-faint:    #8592AC;
 
-  --gradient-primary: linear-gradient(135deg, var(--primary), var(--secondary));
-  --gradient-accent:  linear-gradient(135deg, var(--secondary), var(--accent));
-  --gradient-text:    linear-gradient(135deg, #C4B5FD 0%, #93C5FD 50%, #F0ABFC 100%);
+  --gradient-primary: linear-gradient(120deg, #8B5CF6 0%, #3B82F6 52%, #22D3EE 100%);
+  --gradient-accent:  linear-gradient(120deg, #22D3EE 0%, #A78BFA 48%, #F472B6 100%);
+  --gradient-text:    linear-gradient(100deg, #E9D5FF 0%, #67E8F9 48%, #F9A8D4 100%);
 
   /* Typography */
   --font-display: 'Space Grotesk', 'Inter', sans-serif;
@@ -63,7 +63,7 @@
   --dur-slow: 0.9s;
 
   /* Elevation */
-  --shadow-glow-primary: 0 0 40px rgba(var(--primary-rgb), 0.25);
+  --shadow-glow-primary: 0 0 46px rgba(var(--primary-rgb), 0.34);
   --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.35);
 
   --nav-h: 76px;
